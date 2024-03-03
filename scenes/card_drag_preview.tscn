@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://fv5hobh672qi"]
+
+[ext_resource type="Script" path="res://scripts/card_drag_preview.gd" id="1_1iaba"]
+
+[node name="CardDragPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1iaba")
+
+[node name="PreviewIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = -22.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 22.0
+rotation = 0.10472

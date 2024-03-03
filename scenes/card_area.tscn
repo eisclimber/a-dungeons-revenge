@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx4s7voqtqnq8"]
+
+[ext_resource type="Script" path="res://scripts/card_area.gd" id="1_7wh2y"]
+[ext_resource type="PackedScene" uid="uid://8jws2a8rc4bj" path="res://scenes/card.tscn" id="2_1nd0k"]
+
+[node name="CardArea" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7wh2y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.631373, 0.294118, 0, 1)
+
+[node name="CardsAnchor" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Card1" parent="CardsAnchor" instance=ExtResource("2_1nd0k")]
+layout_mode = 2
+
+[node name="Card2" parent="CardsAnchor" instance=ExtResource("2_1nd0k")]
+layout_mode = 2
+
+[node name="Card3" parent="CardsAnchor" instance=ExtResource("2_1nd0k")]
+layout_mode = 2
