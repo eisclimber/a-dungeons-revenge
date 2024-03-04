@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5x0waoc7ldqq"]
+[gd_scene load_steps=4 format=3 uid="uid://b5x0waoc7ldqq"]
 
 [ext_resource type="Script" path="res://scripts/dungeon_area.gd" id="1_evfgq"]
 [ext_resource type="TileSet" uid="uid://c2j5avx3ghjaf" path="res://resources/tileset.tres" id="2_a7nrn"]
+[ext_resource type="Script" path="res://scripts/dungeon_generator.gd" id="3_g56q5"]
 
 [node name="DungeonArea" type="Control"]
 layout_mode = 3
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.215686, 0.478431, 0.196078, 1)
 
 [node name="Margin" type="MarginContainer" parent="."]
@@ -28,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -36,6 +39,7 @@ theme_override_constants/margin_bottom = 10
 [node name="DungeonSpace" type="Control" parent="Margin"]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
 
 [node name="DungeonMap" type="TileMap" parent="Margin/DungeonSpace"]
 unique_name_in_owner = true
@@ -44,6 +48,13 @@ format = 2
 layer_0/name = "Grid"
 layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 262150, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 262146, 0, 0, 262145, 0, 0, 262144, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 196609, 0, 0, 131073, 0, 0, 131075, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 196611, 0, 0, 65539, 0, 0, 196613, 0, 0, 131077, 0, 0, 65541, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0)
 layer_1/name = "Room"
-layer_1/tile_data = PackedInt32Array(131075, 1, 3)
-layer_2/name = "Preview"
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Hasard"
 layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Preview"
+layer_3/modulate = Color(1, 1, 1, 0.501961)
+layer_3/tile_data = PackedInt32Array()
+
+[node name="DungeonGenerator" type="Node" parent="Margin/DungeonSpace/DungeonMap" node_paths=PackedStringArray("dungeon_map")]
+script = ExtResource("3_g56q5")
+dungeon_map = NodePath("..")

@@ -1,7 +1,9 @@
+Panel
 TextureRect
-TileMap
-Control
 MarginContainer
+TileMap
+Node
+Control
 HBoxContainer
 Button
 Label
