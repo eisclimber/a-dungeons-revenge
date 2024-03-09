@@ -33,8 +33,52 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = -30
 theme_override_constants/margin_bottom = -40
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+[node name="PlayerSprite" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
 texture = ExtResource("2_yatcf")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.5
+offset_right = 29.5
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Health:
+"
+
+[node name="DefenseLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -46.0
+offset_right = 87.0
+offset_bottom = -23.0
+grow_vertical = 0
+text = "Damage"
+
+[node name="AttackLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -46.0
+offset_right = -25.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Attack"

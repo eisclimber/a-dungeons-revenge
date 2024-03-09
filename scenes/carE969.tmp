@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx4s7voqtqnq8"]
+
+[ext_resource type="Script" path="res://scripts/card_area.gd" id="1_7wh2y"]
+[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death/CardData_Death.tres" id="2_yc3nl"]
+
+[node name="CardArea" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7wh2y")
+cards = Array[Resource("res://scripts/card_data.gd")]([ExtResource("2_yc3nl")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.631373, 0.294118, 0, 1)
+
+[node name="InnerMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -91.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 130
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InnerMargin"]
+layout_mode = 2
+vertical_scroll_mode = 0
+
+[node name="CardsAnchor" type="HBoxContainer" parent="InnerMargin/ScrollContainer"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 174)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -87.0
+offset_bottom = 87.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Start"
+
+[node name="Control" type="Control" parent="StartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="cards_drawn" from="." to="." method="_on_cards_drawn"]

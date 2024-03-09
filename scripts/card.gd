@@ -1,5 +1,5 @@
 class_name Card
-extends Button
+extends TextureButton
 
 @onready var card_icon := %CardIcon
 @onready var title_label := %TitleLabel
@@ -21,12 +21,12 @@ func _ready() -> void:
 
 func _update_card_data(_data: CardData) -> void:
 	if _data:
-		disabled = false
+		#disabled = false
 		%CardIcon.texture = data.icon
 		%TitleLabel.text = data.title
 		%ContentLabel.text = data.description
 	else:
-		disabled = true
+		#disabled = true
 		%CardIcon.texture = null
 		%TitleLabel.text = ""
 		%ContentLabel.text = ""
@@ -36,4 +36,4 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	var drag_preview = drag_preview_packed.instantiate()
 	drag_preview.set_displayed_card(card_icon.texture)
 	set_drag_preview(drag_preview)
-	return { "card_data" : data, "drag_preview": drag_preview }
+	return { "card_data" : data, "drag_preview": drag_preview, "card_node": self }

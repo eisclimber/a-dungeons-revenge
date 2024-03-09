@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cb5kks4i6b5eu"]
+
+[ext_resource type="Texture2D" uid="uid://dbqxqun32jpxo" path="res://sprites/Skull.png" id="1_2ar4i"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="2_bhhig"]
+
+[resource]
+script = ExtResource("2_bhhig")
+icon = ExtResource("1_2ar4i")
+title = "Death..."
+description = "Nah just kidding"
+effect = "damage"
+value1 = 2
+value2 = 0
+value3 = 0
+atlas_tile_pos = Vector2i(0, 0)

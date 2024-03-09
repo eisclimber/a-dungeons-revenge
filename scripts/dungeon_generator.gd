@@ -1,8 +1,15 @@
 extends Node
 
+const GRID_LAYER := 0
 const ROOM_LAYER := 1
+const HAZARD_LAYER := 2
+const PREVIEW_LAYER := 3
+const FOW_LAYER := 4
 
+const NO_TILE_ID := -1
 const DUNGEON_TILES_ID := 2
+
+const HAZARDS_TILE_OFFSET := 4
 
 const TILES_PER_ROW := 8
 const START_IDX_OFFSET := 16
@@ -17,25 +24,38 @@ const ASTAR_CHARS: Array[String] = [
 	"╹", "┗", "┛", "┻", "│", "┣", "┫", "╋"
 ]
 
+signal dungeon_created(_astar: AStar2D, _start_pos: Vector2i, _boss_pos: Vector2i, _num_rooms: int)
+signal dungeon_completed(_astar: AStar2D, _start_pos: Vector2i, _boss_pos: Vector2i, _num_rooms: int, _hazards: Array[int])
+
 @export var dungeon_map: TileMap
 @export var min_boss_dist := 2
 @export var min_recursion_depth := 1
-@export var max_recursion_depth := 7
-@export var recursion_connectivity := 0.3
+@export var max_recursion_depth := 10
+@export var recursion_connectivity := 0.4
+
+var start_pos: Vector2i
+var boss_pos: Vector2i
+var dungeon_size: Vector2i
+var dungeon_astar: AStar2D
+var num_rooms: int
+var hazards: Array[int]
 
 
 func _ready() -> void:
-	randomize()
-	regenerate_dungeon()
+	dungeon_size = dungeon_map.get_used_rect().size
+	seed(0)
+	#randomize()
+	generate_dungeon()
 
 
-func regenerate_dungeon() -> void:
-	var start_pos = dungeon_map.get_used_rect().get_center()
-	var boss_pos = _calculate_boss_pos()
+func generate_dungeon() -> void:
+	start_pos = dungeon_map.get_used_rect().get_center()
+	boss_pos = _calculate_boss_pos()
 	var path = _generate_hot_path(start_pos, boss_pos)
-	var dungeon_astar = _generate_rooms_along_path(path)
-	var rooms_ids = Array(dungeon_astar.get_point_ids())
+	dungeon_astar = _generate_rooms_along_path(path)
 	update_dungeon_tiles(dungeon_astar, start_pos, boss_pos)
+	num_rooms = dungeon_map.get_used_cells(ROOM_LAYER).size()
+	dungeon_created.emit(dungeon_astar, start_pos, boss_pos, num_rooms)
 
 
 func update_dungeon_tiles(_astar: AStar2D, _start_pos: Vector2i, _end_pos: Vector2i) -> void:
@@ -176,8 +196,28 @@ func is_in_bounds(_point: Vector2i) -> bool:
 	return dungeon_map.get_used_rect().has_point(_point)
 
 
-# Cantor Pairing Function
 func id(_point: Vector2i) -> int:
-	var a = _point.x
-	var b = _point.y
-	return (a + b) * (a + b + 1) / 2 + b
+	return _point.y * dungeon_size.x + _point.x
+
+func unid(_id: int) -> Vector2i:
+	return Vector2i(_id % dungeon_size.x, _id / dungeon_size.x)
+
+
+func _place_fow() -> void:
+	pass # TODO Gather Roomswa
+
+
+func _gather_hazards() -> void:
+	hazards = []
+	for y in range(dungeon_size.y):
+		for x in range(dungeon_size.x):
+			var tile_pos = Vector2(x, y)
+			var tile_id = id(tile_pos)
+			var hazard = dungeon_map.get_cell_source_id(HAZARD_LAYER, Vector2i(x, y)) - HAZARDS_TILE_OFFSET
+			hazards.append(max(hazard, NO_TILE_ID))
+
+
+func _on_card_area_cards_placement_confirmed() -> void:
+	_place_fow()
+	_gather_hazards()
+	dungeon_completed.emit(dungeon_astar, start_pos, boss_pos, num_rooms, hazards)

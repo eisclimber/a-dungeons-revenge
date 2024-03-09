@@ -1,9 +1,6 @@
-res://scenes/card.tscn
-res://resources/tileset.tres
-res://resources/animations/hero_idle.tres
-res://scenes/dungeon_area.tscn
-res://scenes/card_area.tscn
-res://scripts/card.gd
 res://scenes/game.tscn
-res://scripts/card_drag_preview.gd
-res://scripts/dungeon_area.gd
+res://scripts/hero_area.gd
+res://scripts/hero_movement.gd
+res://resources/animations/hero_idle.tres
+res://resources/tileset.tres
+res://scenes/hero_area.tscn
