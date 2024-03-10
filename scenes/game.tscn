@@ -35,21 +35,21 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 5
 alignment = 1
 script = ExtResource("1_066k4")
 
 [node name="HeroArea" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_4wqp4")]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 
 [node name="DungeonArea" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_duuyy")]
@@ -57,7 +57,7 @@ custom_minimum_size = Vector2(790, 0)
 layout_mode = 2
 
 [node name="CardArea" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ltqvy")]
-custom_minimum_size = Vector2(0, 190)
+custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
 max_cards = 3
 

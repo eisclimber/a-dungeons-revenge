@@ -25,11 +25,13 @@ func _update_card_data(_data: CardData) -> void:
 		%CardIcon.texture = data.icon
 		%TitleLabel.text = data.title
 		%ContentLabel.text = data.description
+		%FightLabel.visible = data.effect == CardData.EFFECTS.FIGHT
 	else:
 		#disabled = true
 		%CardIcon.texture = null
 		%TitleLabel.text = ""
 		%ContentLabel.text = ""
+		%FightLabel.visible = false
 
 
 func _get_drag_data(_at_position: Vector2) -> Variant:

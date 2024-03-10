@@ -1,2 +1,3 @@
+CardData
 Resource
 AnimatedTexture

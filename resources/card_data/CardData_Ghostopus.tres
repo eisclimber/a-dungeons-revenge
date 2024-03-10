@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cdps8j3eoo2u1"]
+
+[ext_resource type="Texture2D" uid="uid://ce0nkua5ljsjs" path="res://sprites/Hazards/Ghostopus.png" id="1_8t4fg"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="2_8dwfb"]
+
+[resource]
+script = ExtResource("2_8dwfb")
+icon = ExtResource("1_8t4fg")
+title = "Ghostopus"
+description = "What is scarier than a Ghost?
+Two Ghosts... or one with tentacles!"
+effect = 6
+value1 = 5
+value2 = 5
+value3 = 5
+atlas_tile_pos = Vector2i(4, 1)

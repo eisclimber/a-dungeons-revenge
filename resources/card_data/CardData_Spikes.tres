@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://d06hjnqsg7n1r"]
+
+[ext_resource type="Texture2D" uid="uid://ka4ioe6n8v06" path="res://sprites/Hazards/Spikes.png" id="1_nfl3d"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1_y02uc"]
+
+[resource]
+script = ExtResource("1_y02uc")
+icon = ExtResource("1_nfl3d")
+title = "Spikes"
+description = "Outch. Hurts every time you pass it."
+effect = 1
+value1 = 1
+value2 = 0
+value3 = 0
+atlas_tile_pos = Vector2i(0, 0)

@@ -1,9 +1,10 @@
 Label
+TextureButton
+TextureRect
 Node
 Sprite2D
 Node2D
 Panel
-TextureButton
 Button
 Control
 ColorRect
@@ -11,4 +12,3 @@ MarginContainer
 ScrollContainer
 HBoxContainer
 AnimationPlayer
-AspectRatioContainer

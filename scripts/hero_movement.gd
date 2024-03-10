@@ -53,8 +53,11 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 	for dir in DIRECTIONS:
 		var neighbor = _room_pos + dir
 		var neighbor_id = id(neighbor)
+		
+		#printt(neighbor, unid(neighbor_id), _room_pos) # TODO  WTF
+		
 		if neighbor.x < 0 or neighbor.x >= dungeon_size.x \
-				and neighbor.y < 0 or neighbor.y >= dungeon_size.y:
+				or neighbor.y < 0 or neighbor.y >= dungeon_size.y:
 			
 			continue
 		elif !astar.has_point(neighbor_id):

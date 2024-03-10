@@ -4,7 +4,7 @@ extends Control
 const NO_TILE_ID := -1
 const GRID_TILE_ID := 0
 const ROOM_TILE_ID := 1
-const HAZARD_TILE_ID := 3
+const HAZARD_TILE_ID := 2
 
 const GRID_LAYER := 0
 const ROOM_LAYER := 1

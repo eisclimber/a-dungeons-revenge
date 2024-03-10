@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://b0aylwovjw1u1"]
+
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1_g6md4"]
+[ext_resource type="Texture2D" uid="uid://m88bd7p8sss4" path="res://sprites/Hazards/Sword.png" id="1_xl20c"]
+
+[resource]
+script = ExtResource("1_g6md4")
+icon = ExtResource("1_xl20c")
+title = "Sword"
+description = "More swords mean more ouh!"
+effect = 4
+value1 = 2
+value2 = 0
+value3 = 0
+atlas_tile_pos = Vector2i(4, 0)

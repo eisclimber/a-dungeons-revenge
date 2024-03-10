@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx4s7voqtqnq8"]
+[gd_scene load_steps=15 format=3 uid="uid://dx4s7voqtqnq8"]
 
 [ext_resource type="Script" path="res://scripts/card_area.gd" id="1_7wh2y"]
-[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death/CardData_Death.tres" id="2_yc3nl"]
+[ext_resource type="Resource" uid="uid://c10vbeioi5b5m" path="res://resources/card_data/CardData_Bandaid.tres" id="2_6rbsw"]
+[ext_resource type="Texture2D" uid="uid://d0g51y4kafnld" path="res://sprites/CardBack.png" id="3_1ug3j"]
+[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death.tres" id="3_7vnpg"]
+[ext_resource type="Resource" uid="uid://q618feocegxg" path="res://resources/card_data/CardData_Ghost.tres" id="4_4ysrp"]
+[ext_resource type="Texture2D" uid="uid://b5p3teb4gi2ih" path="res://sprites/CardBack_Selected.png" id="4_7fdh7"]
+[ext_resource type="Resource" uid="uid://cdps8j3eoo2u1" path="res://resources/card_data/CardData_Ghostopus.tres" id="5_s8vdw"]
+[ext_resource type="Resource" uid="uid://wxnu4nlw3l16" path="res://resources/card_data/CardData_KingSlime.tres" id="6_sy4uw"]
+[ext_resource type="Resource" uid="uid://b2y1436ga3dcs" path="res://resources/card_data/CardData_Shield.tres" id="7_6qkrg"]
+[ext_resource type="Resource" uid="uid://cgc5j61hnuggj" path="res://resources/card_data/CardData_Slime.tres" id="8_tf36o"]
+[ext_resource type="Resource" uid="uid://d06hjnqsg7n1r" path="res://resources/card_data/CardData_Spikes.tres" id="9_p8s1m"]
+[ext_resource type="Resource" uid="uid://b0aylwovjw1u1" path="res://resources/card_data/CardData_Sword.tres" id="10_n7m58"]
+[ext_resource type="Resource" uid="uid://cbql5kv71n4ug" path="res://resources/card_data/CardData_Vitamins.tres" id="11_0t61t"]
+[ext_resource type="Texture2D" uid="uid://d2e1i1k48shl2" path="res://sprites/CardBack_Disabled.png" id="14_gkbq7"]
 
 [node name="CardArea" type="Control"]
 layout_mode = 3
@@ -11,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7wh2y")
-cards = Array[Resource("res://scripts/card_data.gd")]([ExtResource("2_yc3nl")])
+cards = Array[Resource("res://scripts/card_data.gd")]([ExtResource("2_6rbsw"), ExtResource("3_7vnpg"), ExtResource("4_4ysrp"), ExtResource("5_s8vdw"), ExtResource("6_sy4uw"), ExtResource("7_6qkrg"), ExtResource("8_tf36o"), ExtResource("9_p8s1m"), ExtResource("10_n7m58"), ExtResource("11_0t61t")])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -46,7 +58,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 174)
 layout_mode = 1
@@ -60,6 +72,28 @@ offset_top = -87.0
 offset_bottom = 87.0
 grow_horizontal = 0
 grow_vertical = 2
+texture_normal = ExtResource("3_1ug3j")
+texture_pressed = ExtResource("4_7fdh7")
+texture_hover = ExtResource("4_7fdh7")
+texture_disabled = ExtResource("14_gkbq7")
+texture_focused = ExtResource("3_1ug3j")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="StartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -44.0
+offset_right = 20.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Start"
 
 [connection signal="all_cards_placed" from="." to="." method="_on_all_cards_placed"]

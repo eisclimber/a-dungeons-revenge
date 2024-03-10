@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://c10vbeioi5b5m"]
+
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1_si3s6"]
+[ext_resource type="Texture2D" uid="uid://dcyth0m3kgctf" path="res://sprites/Hazards/Bandaid.png" id="1_xh3kl"]
+
+[resource]
+script = ExtResource("1_si3s6")
+icon = ExtResource("1_xh3kl")
+title = "Bandaid"
+description = "Hope it is not used...
+Heals the hero by 2."
+effect = 2
+value1 = 2
+value2 = 0
+value3 = 0
+atlas_tile_pos = Vector2i(2, 0)

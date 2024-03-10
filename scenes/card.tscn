@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://8jws2a8rc4bj"]
+[gd_scene load_steps=6 format=3 uid="uid://8jws2a8rc4bj"]
 
+[ext_resource type="Texture2D" uid="uid://884wo05vivrd" path="res://sprites/CardFront.png" id="1_5v7jx"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_rregg"]
-[ext_resource type="Texture2D" uid="uid://dbqxqun32jpxo" path="res://sprites/Skull.png" id="2_8i0hy"]
-[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death/CardData_Death.tres" id="2_nbs0v"]
+[ext_resource type="Texture2D" uid="uid://qvsamfcdgevw" path="res://sprites/CardFront_Selected.png" id="2_38iuv"]
+[ext_resource type="Texture2D" uid="uid://b5p3teb4gi2ih" path="res://sprites/CardBack_Selected.png" id="3_p2grg"]
+[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death.tres" id="5_h7exv"]
 
 [node name="Card" type="TextureButton"]
 custom_minimum_size = Vector2(120, 174)
@@ -10,16 +12,15 @@ offset_right = 120.0
 offset_bottom = 174.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture_normal = ExtResource("1_5v7jx")
+texture_pressed = ExtResource("1_5v7jx")
+texture_hover = ExtResource("2_38iuv")
+texture_disabled = ExtResource("3_p2grg")
+texture_focused = ExtResource("1_5v7jx")
+ignore_texture_size = true
+stretch_mode = 5
 script = ExtResource("1_rregg")
-data = ExtResource("2_nbs0v")
-
-[node name="CardBackground" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+data = ExtResource("5_h7exv")
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -28,13 +29,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="VBox" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
+theme_override_constants/separation = -2
 
 [node name="IconBackground" type="Panel" parent="Margin/VBox"]
 custom_minimum_size = Vector2(60, 60)
@@ -53,19 +55,35 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 mouse_filter = 2
-texture = ExtResource("2_8i0hy")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="FightLabel" type="Label" parent="Margin/VBox/IconBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -8.0
+offset_right = 20.0
+offset_bottom = 15.0
+grow_horizontal = 2
+text = "Fight"
+
 [node name="TitleLabel" type="Label" parent="Margin/VBox"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 23)
 layout_mode = 2
 size_flags_vertical = 1
 text = "Title"
+autowrap_mode = 3
 
 [node name="ContentLabel" type="Label" parent="Margin/VBox"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 53)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 10
 text = "Stats"
+autowrap_mode = 3

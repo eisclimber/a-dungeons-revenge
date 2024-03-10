@@ -10,7 +10,7 @@ const ATTACK_FORMAT := "Attack\n%s"
 @onready var attack_label: Label = %AttackLabel
 
 
-func _on_hero_stats_player_stats_changed(_effect: String, _health: int, _max_health: int, \
+func _on_hero_stats_player_stats_changed(_effect: int, _health: int, _max_health: int, \
 		_attack: int, _defense: int, _num_effects: int) -> void:
 	
 	health_label.text = HEALTH_FORMAT % [_health, _max_health]

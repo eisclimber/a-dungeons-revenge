@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://cgc5j61hnuggj"]
+
+[ext_resource type="Texture2D" uid="uid://co1ctufct3cys" path="res://sprites/Hazards/Slime.png" id="1_xym32"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="2_ua3ve"]
+
+[resource]
+script = ExtResource("2_ua3ve")
+icon = ExtResource("1_xym32")
+title = "Slime"
+description = "Every game needs one!"
+effect = 6
+value1 = 1
+value2 = 1
+value3 = 1
+atlas_tile_pos = Vector2i(1, 1)

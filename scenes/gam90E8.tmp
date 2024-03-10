@@ -1,0 +1,101 @@
+[gd_scene load_steps=18 format=3 uid="uid://do7yo7thd4stg"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_066k4"]
+[ext_resource type="PackedScene" uid="uid://djmrs2qdfuhry" path="res://scenes/hero_area.tscn" id="2_4wqp4"]
+[ext_resource type="PackedScene" uid="uid://b5x0waoc7ldqq" path="res://scenes/dungeon_area.tscn" id="3_duuyy"]
+[ext_resource type="PackedScene" uid="uid://dx4s7voqtqnq8" path="res://scenes/card_area.tscn" id="4_ltqvy"]
+[ext_resource type="Resource" uid="uid://c10vbeioi5b5m" path="res://resources/card_data/CardData_Death/CardData_Bandaid.tres" id="5_sr1gx"]
+[ext_resource type="Script" path="res://scripts/dungeon_generator.gd" id="5_x1xc2"]
+[ext_resource type="Script" path="res://scripts/hero_movement.gd" id="6_0yghw"]
+[ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death/CardData_Death.tres" id="6_qs4pj"]
+[ext_resource type="Script" path="res://scripts/hero_stats.gd" id="7_44rs8"]
+[ext_resource type="Resource" uid="uid://q618feocegxg" path="res://resources/card_data/CardData_Death/CardData_Ghost.tres" id="7_hs8fn"]
+[ext_resource type="Resource" uid="uid://cdps8j3eoo2u1" path="res://resources/card_data/CardData_Death/CardData_Ghostopus.tres" id="8_i1ysl"]
+[ext_resource type="Resource" uid="uid://wxnu4nlw3l16" path="res://resources/card_data/CardData_Death/CardData_KingSlime.tres" id="9_d171v"]
+[ext_resource type="Resource" uid="uid://b2y1436ga3dcs" path="res://resources/card_data/CardData_Death/CardData_Shield.tres" id="10_vn7cj"]
+[ext_resource type="Resource" uid="uid://cgc5j61hnuggj" path="res://resources/card_data/CardData_Death/CardData_Slime.tres" id="11_fd8dd"]
+[ext_resource type="Resource" uid="uid://d06hjnqsg7n1r" path="res://resources/card_data/CardData_Death/CardData_Spikes.tres" id="12_6agj7"]
+[ext_resource type="Resource" uid="uid://b0aylwovjw1u1" path="res://resources/card_data/CardData_Death/CardData_Sword.tres" id="13_555if"]
+[ext_resource type="Resource" uid="uid://cbql5kv71n4ug" path="res://resources/card_data/CardData_Death/CardData_Vitamins.tres" id="14_ogvo1"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("1_066k4")
+
+[node name="HeroArea" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_4wqp4")]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="DungeonArea" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_duuyy")]
+custom_minimum_size = Vector2(790, 0)
+layout_mode = 2
+
+[node name="CardArea" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ltqvy")]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+cards = Array[Resource("res://scripts/card_data.gd")]([ExtResource("5_sr1gx"), ExtResource("6_qs4pj"), ExtResource("7_hs8fn"), ExtResource("8_i1ysl"), ExtResource("9_d171v"), ExtResource("10_vn7cj"), ExtResource("11_fd8dd"), ExtResource("12_6agj7"), ExtResource("13_555if"), ExtResource("14_ogvo1")])
+max_cards = 3
+
+[node name="DungeonGenerator" type="Node" parent="." node_paths=PackedStringArray("dungeon_map")]
+script = ExtResource("5_x1xc2")
+dungeon_map = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/DungeonArea/Margin/DungeonSpace/DungeonMap")
+
+[node name="HeroMovement" type="Node" parent="." node_paths=PackedStringArray("dungeon_map", "hero", "dungeon_area")]
+script = ExtResource("6_0yghw")
+dungeon_map = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/DungeonArea/Margin/DungeonSpace/DungeonMap")
+hero = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/DungeonArea/Margin/DungeonSpace/DungeonMap/HeroPawn")
+dungeon_area = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/DungeonArea")
+move_duration = 0.1
+visit_duration = 0.2
+
+[node name="HeroStats" type="Node" parent="."]
+script = ExtResource("7_44rs8")
+
+[connection signal="cards_placement_confirmed" from="MarginContainer/VBoxContainer/CardArea" to="DungeonGenerator" method="_on_card_area_cards_placement_confirmed"]
+[connection signal="dungeon_completed" from="DungeonGenerator" to="HeroMovement" method="_on_dungeon_generator_dungeon_completed"]
+[connection signal="dungeon_created" from="DungeonGenerator" to="MarginContainer/VBoxContainer/CardArea" method="_on_dungeon_generator_dungeon_created"]
+[connection signal="dungeon_created" from="DungeonGenerator" to="HeroMovement" method="_on_dungeon_generator_dungeon_created"]
+[connection signal="room_effect_triggered" from="HeroMovement" to="HeroStats" method="_on_hero_movement_room_effect_triggered"]
+[connection signal="player_dead" from="HeroStats" to="MarginContainer/VBoxContainer/HBoxContainer/HeroArea" method="_on_hero_stats_player_dead"]
+[connection signal="player_dead" from="HeroStats" to="MarginContainer/VBoxContainer/HBoxContainer/DungeonArea/Margin/DungeonSpace/DungeonMap/HeroPawn" method="_on_hero_stats_player_dead"]
+[connection signal="player_dead" from="HeroStats" to="HeroMovement" method="_on_hero_stats_player_dead"]
+[connection signal="player_stats_changed" from="HeroStats" to="MarginContainer/VBoxContainer/HBoxContainer/HeroArea" method="_on_hero_stats_player_stats_changed"]
+[connection signal="player_stats_changed" from="HeroStats" to="MarginContainer/VBoxContainer/HBoxContainer/DungeonArea/Margin/DungeonSpace/DungeonMap/HeroPawn" method="_on_hero_stats_player_stats_changed"]
+
+[editable path="MarginContainer/VBoxContainer/HBoxContainer/DungeonArea"]

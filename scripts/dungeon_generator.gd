@@ -7,7 +7,7 @@ const PREVIEW_LAYER := 3
 const FOW_LAYER := 4
 
 const NO_TILE_ID := -1
-const DUNGEON_TILES_ID := 2
+const DUNGEON_TILES_ID := 1
 
 const HAZARDS_TILE_OFFSET := 4
 
@@ -78,6 +78,7 @@ func update_dungeon_tiles(_astar: AStar2D, _start_pos: Vector2i, _end_pos: Vecto
 			elif point == _end_pos:
 				tile_idx += END_IDX_OFFSET
 			
+			@warning_ignore("integer_division")
 			var atlas_pos = Vector2i(tile_idx % TILES_PER_ROW, tile_idx / TILES_PER_ROW)
 		
 			dungeon_map.set_cell(ROOM_LAYER, point, DUNGEON_TILES_ID, atlas_pos)
@@ -200,6 +201,7 @@ func id(_point: Vector2i) -> int:
 	return _point.y * dungeon_size.x + _point.x
 
 func unid(_id: int) -> Vector2i:
+	@warning_ignore("integer_division")
 	return Vector2i(_id % dungeon_size.x, _id / dungeon_size.x)
 
 
@@ -211,8 +213,6 @@ func _gather_hazards() -> void:
 	hazards = []
 	for y in range(dungeon_size.y):
 		for x in range(dungeon_size.x):
-			var tile_pos = Vector2(x, y)
-			var tile_id = id(tile_pos)
 			var hazard = dungeon_map.get_cell_source_id(HAZARD_LAYER, Vector2i(x, y)) - HAZARDS_TILE_OFFSET
 			hazards.append(max(hazard, NO_TILE_ID))
 

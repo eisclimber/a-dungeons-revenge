@@ -2,7 +2,7 @@ class_name HeroStats
 extends Node
 
 signal player_dead(_num_effects: int)
-signal player_stats_changed(_effect: String, _health: int, _max_health: int, _attack: int, _defense: int, _num_effects: int)
+signal player_stats_changed(_effect: int, _health: int, _max_health: int, _attack: int, _defense: int, _num_effects: int)
 
 
 var health := 10
@@ -14,7 +14,7 @@ var num_effects := 0
 
 
 func _ready() -> void:
-	player_stats_changed.emit("none", health, max_health, attack, defense, num_effects)
+	player_stats_changed.emit(CardData.EFFECTS.NONE, health, max_health, attack, defense, num_effects)
 
 
 # Returns if the hero survived
@@ -27,27 +27,33 @@ func apply_card_data(_card_data: CardData) -> void:
 	var value3 = _card_data.value3
 	
 	match _card_data.effect:
-		"damage":
+		CardData.EFFECTS.DAMAGE:
 			health -= value1
 			num_effects += 1
-		"heal":
+		CardData.EFFECTS.HEAL:
 			health = min(health + value1, max_health)
 			num_effects += 1
-		"max_health":
+		CardData.EFFECTS.MAX_HEALTH:
 			max_health *= (100.0 + value1) / 100.0
 			num_effects += 1
-		"attack":
+		CardData.EFFECTS.ATTACK:
 			attack += value1
 			num_effects += 1
-		"defense":
+		CardData.EFFECTS.DEFENSE:
 			defense += value1
 			num_effects += 1
-		"fight": # value1: monster attack; value2: monster defense; value3: monster health
-			var in_damge = max(value1 - defense, 0.0)
+		CardData.EFFECTS.FIGHT: # value1: monster attack; value2: monster defense; value3: monster health
+			var in_damage = max(value1 - defense, 0.0)
 			var out_damage = max(attack - value3, 0.0)
-			var num_rounds = ceil(value3 / out_damage)
-			health -= num_rounds * in_damge
-			num_effects += 1
+			if in_damage == 0: # Does not hurt -> No fight
+				num_effects += 1
+			elif out_damage == 0: # Not possible to win
+				health = 0
+				num_effects += 1
+			else:
+				var num_rounds = ceil(value3 / out_damage)
+				health -= num_rounds * in_damage
+				num_effects += 1
 	
 	player_stats_changed.emit(_card_data.effect, health, max_health, attack, defense, num_effects)
 	

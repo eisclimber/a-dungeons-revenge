@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://q618feocegxg"]
+
+[ext_resource type="Texture2D" uid="uid://crgk2c2ytuykq" path="res://sprites/Hazards/Ghost.png" id="1_7dxsm"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="2_p0laa"]
+
+[resource]
+script = ExtResource("2_p0laa")
+icon = ExtResource("1_7dxsm")
+title = "Ghost"
+description = "Booohhh scary!"
+effect = 6
+value1 = 2
+value2 = 2
+value3 = 2
+atlas_tile_pos = Vector2i(1, 0)

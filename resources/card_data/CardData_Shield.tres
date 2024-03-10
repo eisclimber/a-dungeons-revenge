@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://b2y1436ga3dcs"]
+
+[ext_resource type="Texture2D" uid="uid://bd2bf81y74je7" path="res://sprites/Hazards/Shield.png" id="1_0fvka"]
+[ext_resource type="Script" path="res://scripts/card_data.gd" id="1_srkch"]
+
+[resource]
+script = ExtResource("1_srkch")
+icon = ExtResource("1_0fvka")
+title = "Shield"
+description = "To hide behind, what a coward!"
+effect = 5
+value1 = 2
+value2 = 0
+value3 = 0
+atlas_tile_pos = Vector2i(2, 1)
