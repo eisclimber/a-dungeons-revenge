@@ -1,8 +1,10 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c2j5avx3ghjaf"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://c2j5avx3ghjaf"]
 
 [ext_resource type="Texture2D" uid="uid://cuh8stggfg06l" path="res://sprites/Grid.png" id="1_trmhn"]
 [ext_resource type="Texture2D" uid="uid://dtnhyx1opet0x" path="res://sprites/DungeonTiles.png" id="3_2bh47"]
 [ext_resource type="Texture2D" uid="uid://drac81llgdaxc" path="res://sprites/Hazards/Hasards.png" id="3_ytuhp"]
+[ext_resource type="Texture2D" uid="uid://oxw51bubhmr3" path="res://resources/FowBaseFull.tres" id="4_ryfii"]
+[ext_resource type="Texture2D" uid="uid://cy6tm6midq3ul" path="res://resources/FowBaseSemi.tres" id="5_157e8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjwxn"]
 resource_name = "Grid"
@@ -78,8 +80,22 @@ texture_region_size = Vector2i(64, 64)
 3:1/0 = 0
 4:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qplnh"]
+resource_name = "FowFull"
+texture = ExtResource("4_ryfii")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqd06"]
+resource_name = "FowSemi"
+texture = ExtResource("5_157e8")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_hjwxn")
 sources/1 = SubResource("TileSetAtlasSource_l6spb")
 sources/2 = SubResource("TileSetAtlasSource_1qirg")
+sources/4 = SubResource("TileSetAtlasSource_qplnh")
+sources/5 = SubResource("TileSetAtlasSource_gqd06")

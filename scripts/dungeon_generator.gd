@@ -1,3 +1,4 @@
+class_name DungeonGenerator
 extends Node
 
 const GRID_LAYER := 0
@@ -8,12 +9,16 @@ const FOW_LAYER := 4
 
 const NO_TILE_ID := -1
 const DUNGEON_TILES_ID := 1
+const FOW_FULL_TILE_ID := 4
+const FOW_SEMI_TILE_ID := 5
 
 const HAZARDS_TILE_OFFSET := 4
 
 const TILES_PER_ROW := 8
 const START_IDX_OFFSET := 16
 const END_IDX_OFFSET := 32
+
+const FOW_FADE_DURATION := 0.5
 
 const DIRECTIONS: Array[Vector2i] = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]
 # pos  for connections up, down, left, rigth. Prefix "s" if special.
@@ -52,6 +57,8 @@ func generate_dungeon() -> void:
 	start_pos = dungeon_map.get_used_rect().get_center()
 	boss_pos = _calculate_boss_pos()
 	dungeon_map.clear_layer(HAZARD_LAYER)
+	dungeon_map.clear_layer(FOW_LAYER)
+	dungeon_map.set_layer_modulate(FOW_LAYER, Color.TRANSPARENT)
 	hazards.clear()
 	var path = _generate_hot_path(start_pos, boss_pos)
 	dungeon_astar = _generate_rooms_along_path(path)
@@ -207,7 +214,21 @@ func unid(_id: int) -> Vector2i:
 
 
 func _place_fow() -> void:
-	pass # TODO Gather Roomswa
+	dungeon_map.set_layer_modulate(FOW_LAYER, Color.TRANSPARENT)
+	for y in range(dungeon_size.y):
+		for x in range(dungeon_size.x):
+			var pos = Vector2i(x, y)
+			if pos == start_pos:
+				dungeon_map.set_cell(FOW_LAYER, pos, NO_TILE_ID)
+			elif (start_pos - pos).length_squared() == 1 \
+					and dungeon_astar.are_points_connected(id(start_pos), id(pos)):
+				
+				dungeon_map.set_cell(FOW_LAYER, pos, FOW_SEMI_TILE_ID, Vector2i())
+			else:
+				dungeon_map.set_cell(FOW_LAYER, pos, FOW_FULL_TILE_ID, Vector2i())
+	var tween = get_tree().create_tween()
+	tween.tween_property(dungeon_map, "layer_4/modulate", Color.WHITE, FOW_FADE_DURATION)
+	tween.tween_callback(_emit_dungeon_completed)
 
 
 func _gather_hazards() -> void:
@@ -219,6 +240,8 @@ func _gather_hazards() -> void:
 
 
 func _on_card_area_cards_placement_confirmed() -> void:
-	_place_fow()
 	_gather_hazards()
+	_place_fow()
+
+func _emit_dungeon_completed() -> void:
 	dungeon_completed.emit(dungeon_astar, start_pos, boss_pos, num_rooms, hazards)

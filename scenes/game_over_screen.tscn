@@ -12,69 +12,90 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_bb3jo")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background2" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.176471, 0.176471, 0.176471, 1)
 
-[node name="Vbox" type="VBoxContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Panel1" type="Panel" parent="Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Vbox" type="VBoxContainer" parent="Margin/Panel1"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -278.5
+offset_right = 278.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="TitleLabel" type="Label" parent="Vbox"]
+[node name="TitleLabel" type="Label" parent="Margin/Panel1/Vbox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.741176, 0, 0, 1)
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 48
 text = "He's Dead, Jim."
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="Vbox"]
+[node name="Control" type="Control" parent="Margin/Panel1/Vbox"]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="Vbox"]
+[node name="Control2" type="Control" parent="Margin/Panel1/Vbox"]
 layout_mode = 2
 
-[node name="Control5" type="Control" parent="Vbox"]
+[node name="Control5" type="Control" parent="Margin/Panel1/Vbox"]
 layout_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="Vbox"]
+[node name="ScoreLabel" type="Label" parent="Margin/Panel1/Vbox"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 32
 text = "You let him suffer through x Rooms."
 horizontal_alignment = 1
 
-[node name="Control3" type="Control" parent="Vbox"]
+[node name="Control3" type="Control" parent="Margin/Panel1/Vbox"]
 layout_mode = 2
 
-[node name="Control4" type="Control" parent="Vbox"]
+[node name="Control4" type="Control" parent="Margin/Panel1/Vbox"]
 layout_mode = 2
 
-[node name="RetryButton" type="Button" parent="Vbox"]
+[node name="RetryButton" type="Button" parent="Margin/Panel1/Vbox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Keep Torturing"
 
-[node name="MenuButton" type="Button" parent="Vbox"]
+[node name="MenuButton" type="Button" parent="Margin/Panel1/Vbox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Enough Torture"
 
-[connection signal="pressed" from="Vbox/RetryButton" to="." method="_on_retry_button_pressed"]
-[connection signal="pressed" from="Vbox/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Margin/Panel1/Vbox/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Margin/Panel1/Vbox/MenuButton" to="." method="_on_menu_button_pressed"]

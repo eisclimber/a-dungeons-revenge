@@ -1,3 +1,5 @@
+NoiseTexture2D
+Theme
 AnimatedTexture
 CardData
 Resource

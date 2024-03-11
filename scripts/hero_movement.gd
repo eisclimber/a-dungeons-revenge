@@ -50,6 +50,8 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 	var room_id = id(_room_pos)
 	current_room_id = room_id
 	room_knowledge[room_id] = VISITED
+	# Clear FOW on visit
+	dungeon_map.set_cell(DungeonArea.FOW_LAYER, _room_pos, -1)
 	for dir in DIRECTIONS:
 		var neighbor = _room_pos + dir
 		var neighbor_id = id(neighbor)
@@ -64,6 +66,9 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 				and room_knowledge[neighbor_id] == UNDISCOVERED:
 			
 			room_knowledge[neighbor_id] = DISCOVERED
+			# Make existing rooms semi transparent
+			dungeon_map.set_cell(DungeonArea.FOW_LAYER, neighbor, \
+					DungeonGenerator.FOW_SEMI_TILE_ID, Vector2i())
 	
 	if !_initial:
 		room_entering.emit(room_id)

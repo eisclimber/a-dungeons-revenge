@@ -21,7 +21,7 @@ grow_vertical = 2
 color = Color(0.152941, 0.152941, 0.152941, 0.329412)
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(480, 200)
+custom_minimum_size = Vector2(480, 220)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -54,6 +54,8 @@ alignment = 1
 
 [node name="Title" type="Label" parent="Panel/Margin/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.741176, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
 text = "You reached the Throne Room!"
 horizontal_alignment = 1
 

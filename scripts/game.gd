@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _on_hero_stats_player_dead(_num_effects: int) -> void:
 	get_tree().paused = true
-	Global.change_to_game_over_scene(Global.GAME_OVER_STATES.DEATH, _num_effects, DEATH_WAIT)
+	Global.change_to_game_over_scene(Global.GAME_OVER_STATES.DEATH, DEATH_WAIT, _num_effects)
 
 
 func _on_hero_movement_boss_reached() -> void:
@@ -34,4 +34,4 @@ func _on_hero_stats_player_stats_changed(_effect: int, _health: int, _max_health
 		_attack: int, _defense: int, _num_effects: int) -> void:
 	
 	if _attack >= MAX_ATTACK or _defense >= MAX_DEFENSE:
-		Global.change_to_game_over_scene(Global.GAME_OVER_STATES.UNSTOPPABLE, _num_effects, UNSTOPPABLE_WAIT)
+		Global.change_to_game_over_scene(Global.GAME_OVER_STATES.UNSTOPPABLE, UNSTOPPABLE_WAIT, _num_effects)

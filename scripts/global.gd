@@ -9,7 +9,7 @@ enum GAME_OVER_STATES { DEATH, UNSTOPPABLE }
 
 func change_to_game_over_scene(_type: int, _wait: float, _num_steps: float) -> void:
 	if _wait:
-		await get_tree().create_timer(_wait).timeout
+		await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file(GAME_OVER_SCENE)
 	get_tree().paused = false
 	# Need to wait two frames till the scene is switched

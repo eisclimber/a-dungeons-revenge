@@ -1,11 +1,11 @@
-Control
+TextureRect
 MarginContainer
+Panel
+Control
+ColorRect
 Label
 VBoxContainer
-Panel
 Button
-TextureRect
-ColorRect
 TextureButton
 Node
 Sprite2D
