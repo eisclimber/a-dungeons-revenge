@@ -1,60 +1,65 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710069738
+::res://::1710173206
 icon.svg::CompressedTexture2D::7807959956130171800::1709322257::1709322276::1::::<><>::
-::res://resources/::1710067329
-tileset.tres::TileSet::6688342194983958401::1710067329::0::1::::<><>::uid://cuh8stggfg06l::::res://sprites/Grid.png<>uid://dtnhyx1opet0x::::res://sprites/DungeonTiles.png<>uid://drac81llgdaxc::::res://sprites/Hazards/Hasards.png
-::res://resources/animations/::1710067329
-hero_dying.tres::AnimatedTexture::2394309617301247723::1709502846::0::1::::<><>::uid://dlnc5l815r80::::res://sprites/Hero/Dying/Dying_000.png<>uid://cnrg88xvmfe44::::res://sprites/Hero/Dying/Dying_001.png<>uid://cijvjpgf67mwn::::res://sprites/Hero/Dying/Dying_010.png<>uid://bhvbd48il2mkl::::res://sprites/Hero/Dying/Dying_011.png<>uid://bn4bkj4lcw233::::res://sprites/Hero/Dying/Dying_012.png<>uid://pkm22cqvnjf4::::res://sprites/Hero/Dying/Dying_013.png<>uid://ba5on736x4pe5::::res://sprites/Hero/Dying/Dying_014.png<>uid://blglhkr37kqs2::::res://sprites/Hero/Dying/Dying_002.png<>uid://d0sflrr34k3vi::::res://sprites/Hero/Dying/Dying_003.png<>uid://yrk7mbhl3elb::::res://sprites/Hero/Dying/Dying_004.png<>uid://b8gr7645o8myc::::res://sprites/Hero/Dying/Dying_005.png<>uid://cebp2bi54lben::::res://sprites/Hero/Dying/Dying_006.png<>uid://7tqjv3njvdbp::::res://sprites/Hero/Dying/Dying_007.png<>uid://bvg68f5v2x7uq::::res://sprites/Hero/Dying/Dying_008.png<>uid://cxkkcb6q1akcb::::res://sprites/Hero/Dying/Dying_009.png
-hero_hurt.tres::AnimatedTexture::1530507384373064672::1709502846::0::1::::<><>::uid://cyjkyntq38wir::::res://sprites/Hero/Hurt/Hurt_000.png<>uid://b7q6vfghdxrhc::::res://sprites/Hero/Hurt/Hurt_001.png<>uid://bfrqx1pjf0sal::::res://sprites/Hero/Hurt/Hurt_010.png<>uid://gyl3vc2kdtev::::res://sprites/Hero/Hurt/Hurt_011.png<>uid://jbqmxhb44prr::::res://sprites/Hero/Hurt/Hurt_002.png<>uid://dnl5ons8c16ee::::res://sprites/Hero/Hurt/Hurt_003.png<>uid://dykxmv6c1rg1q::::res://sprites/Hero/Hurt/Hurt_004.png<>uid://ccy16q7qlridm::::res://sprites/Hero/Hurt/Hurt_005.png<>uid://ca7spuk7yvysd::::res://sprites/Hero/Hurt/Hurt_006.png<>uid://kicqrvlf0s27::::res://sprites/Hero/Hurt/Hurt_007.png<>uid://dywu6h3ewgsxi::::res://sprites/Hero/Hurt/Hurt_008.png<>uid://dfb1b538s5ghw::::res://sprites/Hero/Hurt/Hurt_009.png
-hero_idle.tres::AnimatedTexture::2676078796821124753::1710067329::0::1::::<><>::uid://f16dkuoae37y::::res://sprites/Hero/Idle/Idle_000.png<>uid://c002eegmv3tk1::::res://sprites/Hero/Idle/Idle_001.png<>uid://c76x7w8bcwyhl::::res://sprites/Hero/Idle/Idle_010.png<>uid://bsi7cl0afdy7o::::res://sprites/Hero/Idle/Idle_011.png<>uid://vjoplnuk4d8a::::res://sprites/Hero/Idle/Idle_012.png<>uid://cuvp16ha8nr0c::::res://sprites/Hero/Idle/Idle_013.png<>uid://bakcmrtu1epjj::::res://sprites/Hero/Idle/Idle_014.png<>uid://bp7m437gknag5::::res://sprites/Hero/Idle/Idle_015.png<>uid://dv0ooji4bfr3q::::res://sprites/Hero/Idle/Idle_016.png<>uid://cmg2dus6ppjyb::::res://sprites/Hero/Idle/Idle_017.png<>uid://ci3s7ha4mwgch::::res://sprites/Hero/Idle/Idle_002.png<>uid://teaqxmjqb5tn::::res://sprites/Hero/Idle/Idle_003.png<>uid://gg5m1h4m8d5k::::res://sprites/Hero/Idle/Idle_004.png<>uid://b7rhfrrwyoylx::::res://sprites/Hero/Idle/Idle_005.png<>uid://dm44rkoc1l8tn::::res://sprites/Hero/Idle/Idle_006.png<>uid://7suohj7nhb2g::::res://sprites/Hero/Idle/Idle_007.png<>uid://pyddytkhj8do::::res://sprites/Hero/Idle/Idle_008.png<>uid://d1vbfr1p84o8u::::res://sprites/Hero/Idle/Idle_009.png
-::res://resources/card_data/::1710069763
-CardData_Bandaid.tres::Resource/CardData::6650637811568342972::1710021194::0::1::::<><>::res://scripts/card_data.gd<>uid://dcyth0m3kgctf::::res://sprites/Hazards/Bandaid.png
-CardData_Death.tres::Resource/CardData::4905587562137355980::1710019270::0::1::::<><>::uid://c6a2oyint0agv::::res://sprites/Hazards/Death.png<>res://scripts/card_data.gd
-CardData_Ghost.tres::Resource/CardData::1188655051030062764::1710069749::0::1::::<><>::uid://crgk2c2ytuykq::::res://sprites/Hazards/Ghost.png<>res://scripts/card_data.gd
-CardData_Ghostopus.tres::Resource/CardData::5015525917845561342::1710069752::0::1::::<><>::uid://ce0nkua5ljsjs::::res://sprites/Hazards/Ghostopus.png<>res://scripts/card_data.gd
-CardData_KingSlime.tres::Resource/CardData::1592461828954064031::1710069756::0::1::::<><>::uid://dxb6bpdlby32m::::res://sprites/Hazards/KingSlime.png<>res://scripts/card_data.gd
-CardData_Shield.tres::Resource/CardData::4332696476669037634::1710020719::0::1::::<><>::uid://bd2bf81y74je7::::res://sprites/Hazards/Shield.png<>res://scripts/card_data.gd
-CardData_Slime.tres::Resource/CardData::5199942435375636797::1710069763::0::1::::<><>::uid://co1ctufct3cys::::res://sprites/Hazards/Slime.png<>res://scripts/card_data.gd
-CardData_Spikes.tres::Resource/CardData::8978420651848026969::1710020653::0::1::::<><>::uid://ka4ioe6n8v06::::res://sprites/Hazards/Spikes.png<>res://scripts/card_data.gd
-CardData_Sword.tres::Resource/CardData::4142619804311291018::1710020799::0::1::::<><>::res://scripts/card_data.gd<>uid://m88bd7p8sss4::::res://sprites/Hazards/Sword.png
-CardData_Vitamins.tres::Resource/CardData::4876782274990386538::1710069649::0::1::::<><>::res://scripts/card_data.gd<>uid://cjcrbn7h1j05w::::res://sprites/Hazards/Vitamins.png
-::res://scenes/::1710071202
-card.tscn::PackedScene::2336180577625409759::1710071202::0::1::::<><>::uid://884wo05vivrd::::res://sprites/CardFront.png<>res://scripts/card.gd<>uid://qvsamfcdgevw::::res://sprites/CardFront_Selected.png<>uid://b5p3teb4gi2ih::::res://sprites/CardBack_Selected.png<>uid://cb5kks4i6b5eu::::res://resources/card_data/CardData_Death.tres
-card_area.tscn::PackedScene::8834623586267151013::1710071202::0::1::::<><>::res://scripts/card_area.gd<>uid://c10vbeioi5b5m::::res://resources/card_data/CardData_Bandaid.tres<>uid://d0g51y4kafnld::::res://sprites/CardBack.png<>uid://cb5kks4i6b5eu::::res://resources/card_data/CardData_Death.tres<>uid://q618feocegxg::::res://resources/card_data/CardData_Ghost.tres<>uid://b5p3teb4gi2ih::::res://sprites/CardBack_Selected.png<>uid://cdps8j3eoo2u1::::res://resources/card_data/CardData_Ghostopus.tres<>uid://wxnu4nlw3l16::::res://resources/card_data/CardData_KingSlime.tres<>uid://b2y1436ga3dcs::::res://resources/card_data/CardData_Shield.tres<>uid://cgc5j61hnuggj::::res://resources/card_data/CardData_Slime.tres<>uid://d06hjnqsg7n1r::::res://resources/card_data/CardData_Spikes.tres<>uid://b0aylwovjw1u1::::res://resources/card_data/CardData_Sword.tres<>uid://cbql5kv71n4ug::::res://resources/card_data/CardData_Vitamins.tres<>uid://d2e1i1k48shl2::::res://sprites/CardBack_Disabled.png
-card_drag_preview.tscn::PackedScene::396130898598215716::1710071202::0::1::::<><>::res://scripts/card_drag_preview.gd<>uid://cjcrbn7h1j05w::::res://sprites/Hazards/Vitamins.png
-dungeon_area.tscn::PackedScene::4541123915223848532::1710071202::0::1::::<><>::res://scripts/dungeon_area.gd<>uid://c2j5avx3ghjaf::::res://resources/tileset.tres<>uid://dg4wf1k0kp1kj::::res://scenes/hero_pawn.tscn
-game.tscn::PackedScene::8209449869504439820::1710071202::0::1::::<><>::res://scripts/game.gd<>uid://djmrs2qdfuhry::::res://scenes/hero_area.tscn<>uid://b5x0waoc7ldqq::::res://scenes/dungeon_area.tscn<>uid://dx4s7voqtqnq8::::res://scenes/card_area.tscn<>res://scripts/dungeon_generator.gd<>res://scripts/hero_movement.gd<>res://scripts/hero_stats.gd
-game_over_screen.tscn::PackedScene::1621296264341619632::1709577910::0::1::::<><>::res://scripts/game_over_screen.gd<>uid://3u4v3n27hupq::::res://scenes/main_menu.tscn<>uid://do7yo7thd4stg::::res://scenes/game.tscn
-hero_area.tscn::PackedScene::7816799953028737222::1710071202::0::1::::<><>::res://scripts/hero_area.gd<>uid://beekvkt5jc4lh::::res://resources/animations/hero_idle.tres
-hero_pawn.tscn::PackedScene::7641608152790634493::1710071202::0::1::::<><>::res://scripts/hero_pawn.gd<>uid://djih7vo3x6n81::::res://icon.svg
-main_menu.tscn::PackedScene::2008374963414411958::1709577910::0::1::::<><>::res://scripts/main_menu.gd<>uid://do7yo7thd4stg::::res://scenes/game.tscn
-::res://scripts/::1710069921
+::res://resources/::1710136021
+tileset.tres::TileSet::6688342194983958401::1710136021::0::1::::<><>::uid://cuh8stggfg06l::::res://sprites/Grid.png<>uid://dtnhyx1opet0x::::res://sprites/DungeonTiles.png<>uid://drac81llgdaxc::::res://sprites/Hazards/Hasards.png
+::res://resources/animations/::1710136021
+hero_dying.tres::AnimatedTexture::3662271678975185588::1710136021::0::1::::<><>::uid://c0ywdxa0g70ba::::res://sprites/Hero/Dying/HeroDing_01.png<>uid://b3r0lb08yj285::::res://sprites/Hero/Dying/HeroDing_02.png<>uid://loueofi3dfmf::::res://sprites/Hero/Dying/HeroDing_03.png<>uid://vdh4cwpr0occ::::res://sprites/Hero/Dying/HeroDing_04.png<>uid://b4ysjqyma2yvh::::res://sprites/Hero/Dying/HeroDing_05.png<>uid://qy0jj75i00dy::::res://sprites/Hero/Dying/HeroDing_06.png<>uid://cemuwgu3xo1p7::::res://sprites/Hero/Dying/HeroDing_07.png<>uid://cme0kg73t4i7u::::res://sprites/Hero/Dying/HeroDing_08.png<>uid://bd1u30eimp3bw::::res://sprites/Hero/Dying/HeroDing_09.png
+hero_hurt.tres::AnimatedTexture::7671306710974480009::1710136021::0::1::::<><>::uid://5k6jl8d58j6p::::res://sprites/Hero/Hurt/HeroHurt_01.png<>uid://c6adshkaac0bd::::res://sprites/Hero/Hurt/HeroHurt_02.png
+hero_idle.tres::AnimatedTexture::3362006986274149775::1710136021::0::1::::<><>::uid://2n8cagecmcsg::::res://sprites/Hero/Idle/HeroIdle_01.png<>uid://df28jyne2xedc::::res://sprites/Hero/Idle/HeroIdle_02.png
+::res://resources/card_data/::1710136021
+CardData_Bandaid.tres::Resource/Resource::6650637811568342972::1710105172::0::1::::<><>::uid://dcyth0m3kgctf::::res://sprites/Hazards/Bandaid.png<>res://scripts/card_data.gd
+CardData_Death.tres::Resource/Resource::4905587562137355980::1710019270::0::1::::<><>::uid://c6a2oyint0agv::::res://sprites/Hazards/Death.png<>res://scripts/card_data.gd
+CardData_Ghost.tres::Resource/CardData::1188655051030062764::1710136021::0::1::::<><>::uid://crgk2c2ytuykq::::res://sprites/Hazards/Ghost.png<>res://scripts/card_data.gd
+CardData_Ghostopus.tres::Resource/Resource::5015525917845561342::1710105303::0::1::::<><>::uid://ce0nkua5ljsjs::::res://sprites/Hazards/Ghostopus.png<>res://scripts/card_data.gd
+CardData_KingSlime.tres::Resource/Resource::1592461828954064031::1710069756::0::1::::<><>::uid://dxb6bpdlby32m::::res://sprites/Hazards/KingSlime.png<>res://scripts/card_data.gd
+CardData_Shield.tres::Resource/Resource::4332696476669037634::1710020719::0::1::::<><>::uid://bd2bf81y74je7::::res://sprites/Hazards/Shield.png<>res://scripts/card_data.gd
+CardData_Slime.tres::Resource/Resource::5199942435375636797::1710069763::0::1::::<><>::uid://co1ctufct3cys::::res://sprites/Hazards/Slime.png<>res://scripts/card_data.gd
+CardData_Spikes.tres::Resource/Resource::8978420651848026969::1710020653::0::1::::<><>::uid://ka4ioe6n8v06::::res://sprites/Hazards/Spikes.png<>res://scripts/card_data.gd
+CardData_Sword.tres::Resource/Resource::4142619804311291018::1710020799::0::1::::<><>::res://scripts/card_data.gd<>uid://m88bd7p8sss4::::res://sprites/Hazards/Sword.png
+CardData_Vitamins.tres::Resource/Resource::4876782274990386538::1710069649::0::1::::<><>::res://scripts/card_data.gd<>uid://cjcrbn7h1j05w::::res://sprites/Hazards/Vitamins.png
+::res://scenes/::1710136850
+boss_reached_popup.gd::GDScript::-1::1710106499::0::1::::<>Control<>::
+boss_reached_popup.tscn::PackedScene::5869190026775437945::1710093968::0::1::::<><>::res://scenes/boss_reached_popup.gd
+card.tscn::PackedScene::2336180577625409759::1710136787::0::1::::<><>::uid://884wo05vivrd::::res://sprites/CardFront.png<>res://scripts/card.gd<>uid://qvsamfcdgevw::::res://sprites/CardFront_Selected.png<>uid://b5p3teb4gi2ih::::res://sprites/CardBack_Selected.png<>uid://cb5kks4i6b5eu::::res://resources/card_data/CardData_Death.tres
+card_area.tscn::PackedScene::8834623586267151013::1710107275::0::1::::<><>::res://scripts/card_area.gd<>uid://c10vbeioi5b5m::::res://resources/card_data/CardData_Bandaid.tres<>uid://d0g51y4kafnld::::res://sprites/CardBack.png<>uid://cb5kks4i6b5eu::::res://resources/card_data/CardData_Death.tres<>uid://q618feocegxg::::res://resources/card_data/CardData_Ghost.tres<>uid://b5p3teb4gi2ih::::res://sprites/CardBack_Selected.png<>uid://cdps8j3eoo2u1::::res://resources/card_data/CardData_Ghostopus.tres<>uid://wxnu4nlw3l16::::res://resources/card_data/CardData_KingSlime.tres<>uid://b2y1436ga3dcs::::res://resources/card_data/CardData_Shield.tres<>uid://cgc5j61hnuggj::::res://resources/card_data/CardData_Slime.tres<>uid://d06hjnqsg7n1r::::res://resources/card_data/CardData_Spikes.tres<>uid://b0aylwovjw1u1::::res://resources/card_data/CardData_Sword.tres<>uid://cbql5kv71n4ug::::res://resources/card_data/CardData_Vitamins.tres<>uid://d2e1i1k48shl2::::res://sprites/CardBack_Disabled.png
+card_drag_preview.tscn::PackedScene::396130898598215716::1710136083::0::1::::<><>::res://scripts/card_drag_preview.gd<>uid://cjcrbn7h1j05w::::res://sprites/Hazards/Vitamins.png
+dungeon_area.tscn::PackedScene::4541123915223848532::1710104558::0::1::::<><>::res://scripts/dungeon_area.gd<>uid://c2j5avx3ghjaf::::res://resources/tileset.tres<>uid://dg4wf1k0kp1kj::::res://scenes/hero_pawn.tscn
+game.tscn::PackedScene::8209449869504439820::1710136850::0::1::::<><>::res://scripts/game.gd<>uid://djmrs2qdfuhry::::res://scenes/hero_area.tscn<>uid://b5x0waoc7ldqq::::res://scenes/dungeon_area.tscn<>uid://dx4s7voqtqnq8::::res://scenes/card_area.tscn<>uid://cpvcx415yyb42::::res://scenes/boss_reached_popup.tscn<>res://scripts/dungeon_generator.gd<>res://scripts/hero_movement.gd<>res://scripts/hero_stats.gd
+game_over_screen.tscn::PackedScene::1621296264341619632::1710136787::0::1::::<><>::res://scripts/game_over_screen.gd
+hero_area.tscn::PackedScene::7816799953028737222::1710136787::0::1::::<><>::res://scripts/hero_area.gd<>uid://bn5t08bdch6et::::res://resources/animations/hero_idle.tres<>uid://dhkbkhwg1a2jl::::res://resources/animations/hero_hurt.tres<>uid://bsgbcx5g4amwi::::res://resources/animations/hero_dying.tres
+hero_pawn.tscn::PackedScene::7641608152790634493::1710136787::0::1::::<><>::res://scripts/hero_pawn.gd<>uid://bkg5uwj4rxc78::::res://sprites/Hero/HeroSprite.png
+main_menu.tscn::PackedScene::2008374963414411958::1710136787::0::1::::<><>::res://scripts/main_menu.gd
+tutorial_scene.tscn::PackedScene::1333067371087185644::1710136021::0::1::::<><>::res://scripts/tutorial_scene.gd
+::res://scripts/::1710136850
 card.gd::GDScript::-1::1710069725::0::1::::Card<>TextureButton<>::
-card_area.gd::GDScript::-1::1710068544::0::1::::CardArea<>Control<>::
+card_area.gd::GDScript::-1::1710104809::0::1::::CardArea<>Control<>::
 card_data.gd::GDScript::-1::1710020424::0::1::::CardData<>Resource<>::
-card_drag_preview.gd::GDScript::-1::1709531713::0::1::::CardDragPreview<>Control<>::
-dungeon_area.gd::GDScript::-1::1710021897::0::1::::DungeonArea<>Control<>::
-dungeon_generator.gd::GDScript::-1::1710023011::0::1::::<>Node<>::
-game.gd::GDScript::-1::1709462549::0::1::::Game<>Control<>::
-game_over_screen.gd::GDScript::-1::1709577488::0::1::::GameOverScreen<>Control<>::
-hero_area.gd::GDScript::-1::1710067329::0::1::::HeroArea<>Control<>::
-hero_movement.gd::GDScript::-1::1710068581::0::1::::HeroMovement<>Node<>::
-hero_pawn.gd::GDScript::-1::1710022681::0::1::::HeroPawn<>Node<>::
-hero_stats.gd::GDScript::-1::1710069921::0::1::::HeroStats<>Node<>::
-main_menu.gd::GDScript::-1::1709577859::0::1::::MainMenu<>Control<>::
-::res://sprites/::1710073706
-ArtWorksheet.svg::CompressedTexture2D::8623774345932679685::1710080347::1710080434::1::::<><>::
+card_drag_preview.gd::GDScript::-1::1710093971::0::1::::CardDragPreview<>Control<>::
+dungeon_area.gd::GDScript::-1::1710136717::0::1::::DungeonArea<>Control<>::
+dungeon_generator.gd::GDScript::-1::1710106651::0::1::::<>Node<>::
+game.gd::GDScript::-1::1710136734::0::1::::Game<>Control<>::
+game_over_screen.gd::GDScript::-1::1710099903::0::1::::GameOverScreen<>Control<>::
+global.gd::GDScript::-1::1710136213::0::1::::<>Node<>::
+hero_area.gd::GDScript::-1::1710136021::0::1::::HeroArea<>Control<>::
+hero_movement.gd::GDScript::-1::1710136850::0::1::::HeroMovement<>Node<>::
+hero_pawn.gd::GDScript::-1::1710106817::0::1::::HeroPawn<>Node<>::
+hero_stats.gd::GDScript::-1::1710136758::0::1::::HeroStats<>Node<>::
+main_menu.gd::GDScript::-1::1710136043::0::1::::MainMenu<>Control<>::
+tutorial_scene.gd::GDScript::-1::1710107336::0::1::::TutorialScene<>Control<>::
+::res://sprites/::1710091123
+ArtWorksheet.svg::CompressedTexture2D::8623774345932679685::1710090788::1710090974::1::::<><>::
 CardBack.png::CompressedTexture2D::8928238654793290325::1710067923::1710067657::1::::<><>::
 CardBack_Disabled.png::CompressedTexture2D::9064212650903174125::1710068147::1710068153::1::::<><>::
 CardBack_Selected.png::CompressedTexture2D::4524785877990819459::1710067918::1710067209::1::::<><>::
-CardFront.png::CompressedTexture2D::2386157161533653929::1710067179::1710067209::1::::<><>::
-CardFront_Selected.png::CompressedTexture2D::1167466975012914640::1710067186::1710067209::1::::<><>::
+CardFront.png::CompressedTexture2D::2386157161533653929::1710088366::1710090959::1::::<><>::
+CardFront_Selected.png::CompressedTexture2D::1167466975012914640::1710088371::1710090959::1::::<><>::
 DungeonTiles.png::CompressedTexture2D::8520156117866067461::1710073706::1710080420::1::::<><>::
 DungeonTiles_old.png::CompressedTexture2D::1796514009884523767::1709501753::1710017735::1::::<><>::
-Grid.png::CompressedTexture2D::6193105696968888909::1709466624::1709467289::1::::<><>::
+Grid.png::CompressedTexture2D::6193105696968888909::1710090949::1710090959::1::::<><>::
 Rooms_old.png::CompressedTexture2D::6717710371003499675::1709467280::1710017735::1::::<><>::
-::res://sprites/Hazards/::1710069552
-Bandaid.png::CompressedTexture2D::7350352260779900259::1710069448::1710069552::1::::<><>::
+::res://sprites/Hazards/::1710105141
+Bandaid.png::CompressedTexture2D::7350352260779900259::1710105133::1710105141::1::::<><>::
 Death.png::CompressedTexture2D::6950361153620441593::1710069496::1710069552::1::::<><>::
 Ghost.png::CompressedTexture2D::5979093509993282388::1710069423::1710069552::1::::<><>::
 Ghostopus.png::CompressedTexture2D::5106014416479979204::1710069484::1710069552::1::::<><>::
@@ -66,228 +71,21 @@ Slime.png::CompressedTexture2D::5809315422302325466::1710069520::1710069552::1::
 Spikes.png::CompressedTexture2D::703664258455102845::1710069411::1710069552::1::::<><>::
 Sword.png::CompressedTexture2D::912396243825710537::1710069474::1710069552::1::::<><>::
 Vitamins.png::CompressedTexture2D::5409704422898017470::1710069531::1710069552::1::::<><>::
-::res://sprites/Hero/::1709472790
-::res://sprites/Hero/Dying/::1709473657
-Dying_000.png::CompressedTexture2D::234069172931195055::1507149396::1709473656::1::::<><>::
-Dying_001.png::CompressedTexture2D::5720815759426538063::1507149396::1709473656::1::::<><>::
-Dying_002.png::CompressedTexture2D::3171565170524124623::1507149396::1709473656::1::::<><>::
-Dying_003.png::CompressedTexture2D::8951466090769974178::1507149396::1709473656::1::::<><>::
-Dying_004.png::CompressedTexture2D::1720291616623274039::1507149396::1709473656::1::::<><>::
-Dying_005.png::CompressedTexture2D::4716129798960780618::1507149396::1709473656::1::::<><>::
-Dying_006.png::CompressedTexture2D::5056620157303356161::1507149396::1709473656::1::::<><>::
-Dying_007.png::CompressedTexture2D::2286254864621972629::1507149396::1709473656::1::::<><>::
-Dying_008.png::CompressedTexture2D::3874714134542811584::1507149396::1709473656::1::::<><>::
-Dying_009.png::CompressedTexture2D::6408439391291029325::1507149398::1709473656::1::::<><>::
-Dying_010.png::CompressedTexture2D::5354223442659193529::1507149398::1709473656::1::::<><>::
-Dying_011.png::CompressedTexture2D::2921162170904022615::1507149398::1709473656::1::::<><>::
-Dying_012.png::CompressedTexture2D::3358821698799909552::1507149398::1709473656::1::::<><>::
-Dying_013.png::CompressedTexture2D::1074254674435327395::1507149398::1709473656::1::::<><>::
-Dying_014.png::CompressedTexture2D::2449226994976507930::1507149398::1709473657::1::::<><>::
-::res://sprites/Hero/Falling Down/::1709473657
-Falling Down_000.png::CompressedTexture2D::6127190736410010348::1507149376::1709473657::1::::<><>::
-Falling Down_001.png::CompressedTexture2D::2372445362400997550::1507149376::1709473657::1::::<><>::
-Falling Down_002.png::CompressedTexture2D::4512268673811867434::1507149376::1709473657::1::::<><>::
-Falling Down_003.png::CompressedTexture2D::1070909071908651773::1507149376::1709473657::1::::<><>::
-Falling Down_004.png::CompressedTexture2D::8479834787587120670::1507149376::1709473657::1::::<><>::
-Falling Down_005.png::CompressedTexture2D::2689800735233435507::1507149376::1709473657::1::::<><>::
-::res://sprites/Hero/Hurt/::1709473657
-Hurt_000.png::CompressedTexture2D::6476603756387442177::1507149388::1709473657::1::::<><>::
-Hurt_001.png::CompressedTexture2D::4667413724831415036::1507149388::1709473657::1::::<><>::
-Hurt_002.png::CompressedTexture2D::634758090843504551::1507149388::1709473657::1::::<><>::
-Hurt_003.png::CompressedTexture2D::8096272396679175064::1507149388::1709473657::1::::<><>::
-Hurt_004.png::CompressedTexture2D::8865857147298747076::1507149388::1709473657::1::::<><>::
-Hurt_005.png::CompressedTexture2D::4964399012732368970::1507149388::1709473655::1::::<><>::
-Hurt_006.png::CompressedTexture2D::4840022215696391151::1507149388::1709473655::1::::<><>::
-Hurt_007.png::CompressedTexture2D::718554390946134198::1507149388::1709473655::1::::<><>::
-Hurt_008.png::CompressedTexture2D::8890480719577149678::1507149388::1709473655::1::::<><>::
-Hurt_009.png::CompressedTexture2D::7513852695108995148::1507149388::1709473655::1::::<><>::
-Hurt_010.png::CompressedTexture2D::2773473258042129099::1507149388::1709473655::1::::<><>::
-Hurt_011.png::CompressedTexture2D::471397124395618817::1507149388::1709473656::1::::<><>::
-::res://sprites/Hero/Idle/::1709502504
-Idle_000.png::CompressedTexture2D::406506180719067560::1507149198::1709502504::1::::<><>::
-Idle_001.png::CompressedTexture2D::6580818624105458282::1507149198::1709502504::1::::<><>::
-Idle_002.png::CompressedTexture2D::5393305113876873971::1507149198::1709502504::1::::<><>::
-Idle_003.png::CompressedTexture2D::1341875339846413875::1507149198::1709502504::1::::<><>::
-Idle_004.png::CompressedTexture2D::435363645418105146::1507149198::1709502504::1::::<><>::
-Idle_005.png::CompressedTexture2D::4667992970038900573::1507149198::1709502504::1::::<><>::
-Idle_006.png::CompressedTexture2D::8063186827876885967::1507149198::1709502504::1::::<><>::
-Idle_007.png::CompressedTexture2D::2284441519998383976::1507149198::1709502504::1::::<><>::
-Idle_008.png::CompressedTexture2D::1102566519403722416::1507149198::1709502504::1::::<><>::
-Idle_009.png::CompressedTexture2D::9027594498254346246::1507149198::1709502504::1::::<><>::
-Idle_010.png::CompressedTexture2D::7084334916958926473::1507149198::1709502504::1::::<><>::
-Idle_011.png::CompressedTexture2D::3668282022950289238::1507149198::1709502504::1::::<><>::
-Idle_012.png::CompressedTexture2D::1493422539755047222::1507149198::1709502504::1::::<><>::
-Idle_013.png::CompressedTexture2D::6220928997597245264::1507149198::1709502504::1::::<><>::
-Idle_014.png::CompressedTexture2D::2407208247937954935::1507149198::1709502504::1::::<><>::
-Idle_015.png::CompressedTexture2D::3506095338703971634::1507149198::1709502504::1::::<><>::
-Idle_016.png::CompressedTexture2D::8685712736730644068::1507149198::1709502504::1::::<><>::
-Idle_017.png::CompressedTexture2D::5629139553455984925::1507149198::1709502504::1::::<><>::
-::res://sprites/Hero/Idle Blinking/::1709473659
-Idle Blinking_000.png::CompressedTexture2D::6200099742434071044::1507149208::1709473656::1::::<><>::
-Idle Blinking_001.png::CompressedTexture2D::6397280648016313873::1507149208::1709473658::1::::<><>::
-Idle Blinking_002.png::CompressedTexture2D::2375107287220762644::1507149208::1709473658::1::::<><>::
-Idle Blinking_003.png::CompressedTexture2D::2921649863635247012::1507149208::1709473658::1::::<><>::
-Idle Blinking_004.png::CompressedTexture2D::378133167471177271::1507149208::1709473658::1::::<><>::
-Idle Blinking_005.png::CompressedTexture2D::6433433275385761887::1507149208::1709473658::1::::<><>::
-Idle Blinking_006.png::CompressedTexture2D::5573207112047784607::1507149208::1709473658::1::::<><>::
-Idle Blinking_007.png::CompressedTexture2D::3344981287448464671::1507149208::1709473658::1::::<><>::
-Idle Blinking_008.png::CompressedTexture2D::7864929816095004415::1507149208::1709473658::1::::<><>::
-Idle Blinking_009.png::CompressedTexture2D::8682340014453988558::1507149208::1709473658::1::::<><>::
-Idle Blinking_010.png::CompressedTexture2D::8240560980428270618::1507149208::1709473658::1::::<><>::
-Idle Blinking_011.png::CompressedTexture2D::3163964023209958214::1507149208::1709473658::1::::<><>::
-Idle Blinking_012.png::CompressedTexture2D::7859528158073289630::1507149208::1709473658::1::::<><>::
-Idle Blinking_013.png::CompressedTexture2D::1213385839307076404::1507149208::1709473658::1::::<><>::
-Idle Blinking_014.png::CompressedTexture2D::9050260422007561615::1507149208::1709473658::1::::<><>::
-Idle Blinking_015.png::CompressedTexture2D::3650241750000224809::1507149208::1709473658::1::::<><>::
-Idle Blinking_016.png::CompressedTexture2D::1916546626773012016::1507149208::1709473659::1::::<><>::
-Idle Blinking_017.png::CompressedTexture2D::8097549650785077191::1507149208::1709473659::1::::<><>::
-::res://sprites/Hero/Jump Loop/::1709473659
-Jump Loop_000.png::CompressedTexture2D::4137469645795935314::1507149322::1709473659::1::::<><>::
-Jump Loop_001.png::CompressedTexture2D::420132890131650390::1507149322::1709473659::1::::<><>::
-Jump Loop_002.png::CompressedTexture2D::5456500932061637953::1507149322::1709473659::1::::<><>::
-Jump Loop_003.png::CompressedTexture2D::830857007638012767::1507149322::1709473659::1::::<><>::
-Jump Loop_004.png::CompressedTexture2D::2798080953844732276::1507149322::1709473659::1::::<><>::
-Jump Loop_005.png::CompressedTexture2D::6289683461876963631::1507149322::1709473659::1::::<><>::
-::res://sprites/Hero/Jump Start/::1709473659
-Jump Start_000.png::CompressedTexture2D::4940289154440661758::1507149312::1709473659::1::::<><>::
-Jump Start_001.png::CompressedTexture2D::7666561203005048265::1507149312::1709473659::1::::<><>::
-Jump Start_002.png::CompressedTexture2D::5436793931736371546::1507149312::1709473659::1::::<><>::
-Jump Start_003.png::CompressedTexture2D::2910431141178832683::1507149312::1709473657::1::::<><>::
-Jump Start_004.png::CompressedTexture2D::2984371821478723448::1507149312::1709473657::1::::<><>::
-Jump Start_005.png::CompressedTexture2D::5101848789689744343::1507149312::1709473657::1::::<><>::
-::res://sprites/Hero/Kicking/::1709473658
-Kicking_000.png::CompressedTexture2D::1940051981391163340::1507149244::1709473657::1::::<><>::
-Kicking_001.png::CompressedTexture2D::4266153768115109579::1507149244::1709473657::1::::<><>::
-Kicking_002.png::CompressedTexture2D::6003800995812685287::1507149244::1709473657::1::::<><>::
-Kicking_003.png::CompressedTexture2D::2428346792327017609::1507149244::1709473657::1::::<><>::
-Kicking_004.png::CompressedTexture2D::3680483503872684367::1507149244::1709473657::1::::<><>::
-Kicking_005.png::CompressedTexture2D::4939146044972423609::1507149244::1709473657::1::::<><>::
-Kicking_006.png::CompressedTexture2D::2315780380070266860::1507149244::1709473657::1::::<><>::
-Kicking_007.png::CompressedTexture2D::1301323374827981518::1507149244::1709473658::1::::<><>::
-Kicking_008.png::CompressedTexture2D::4518425662144402036::1507149246::1709473657::1::::<><>::
-Kicking_009.png::CompressedTexture2D::9115791452783963078::1507149246::1709473658::1::::<><>::
-Kicking_010.png::CompressedTexture2D::3269885311193234839::1507149246::1709473658::1::::<><>::
-Kicking_011.png::CompressedTexture2D::619887423605148891::1507149246::1709473657::1::::<><>::
-::res://sprites/Hero/Run Slashing/::1709473658
-Run Slashing_000.png::CompressedTexture2D::6699770505479876424::1507149280::1709473658::1::::<><>::
-Run Slashing_001.png::CompressedTexture2D::8253458098202557255::1507149280::1709473658::1::::<><>::
-Run Slashing_002.png::CompressedTexture2D::3383616052189213953::1507149280::1709473658::1::::<><>::
-Run Slashing_003.png::CompressedTexture2D::6599263765983562456::1507149280::1709473658::1::::<><>::
-Run Slashing_004.png::CompressedTexture2D::6281216883690793615::1507149280::1709473658::1::::<><>::
-Run Slashing_005.png::CompressedTexture2D::7482157173580269088::1507149280::1709473658::1::::<><>::
-Run Slashing_006.png::CompressedTexture2D::2247458382629115190::1507149280::1709473658::1::::<><>::
-Run Slashing_007.png::CompressedTexture2D::2610361800659576508::1507149280::1709473658::1::::<><>::
-Run Slashing_008.png::CompressedTexture2D::3567555157059517126::1507149280::1709473658::1::::<><>::
-Run Slashing_009.png::CompressedTexture2D::4158975471207869607::1507149280::1709473658::1::::<><>::
-Run Slashing_010.png::CompressedTexture2D::2282822026887758245::1507149280::1709473658::1::::<><>::
-Run Slashing_011.png::CompressedTexture2D::2964043876504426027::1507149280::1709473653::1::::<><>::
-::res://sprites/Hero/Run Throwing/::1709473653
-Run Throwing_000.png::CompressedTexture2D::2558558222961502259::1507149290::1709473653::1::::<><>::
-Run Throwing_001.png::CompressedTexture2D::7123512246419925943::1507149290::1709473653::1::::<><>::
-Run Throwing_002.png::CompressedTexture2D::8287126344436260787::1507149290::1709473653::1::::<><>::
-Run Throwing_003.png::CompressedTexture2D::1683620221833470919::1507149290::1709473653::1::::<><>::
-Run Throwing_004.png::CompressedTexture2D::3202829181736159521::1507149290::1709473653::1::::<><>::
-Run Throwing_005.png::CompressedTexture2D::3495909811965408006::1507149290::1709473653::1::::<><>::
-Run Throwing_006.png::CompressedTexture2D::3630229434447677889::1507149290::1709473653::1::::<><>::
-Run Throwing_007.png::CompressedTexture2D::9184520495352746611::1507149290::1709473653::1::::<><>::
-Run Throwing_008.png::CompressedTexture2D::2842106272666275975::1507149290::1709473653::1::::<><>::
-Run Throwing_009.png::CompressedTexture2D::247760965313514417::1507149290::1709473653::1::::<><>::
-Run Throwing_010.png::CompressedTexture2D::8336846968211443723::1507149290::1709473653::1::::<><>::
-Run Throwing_011.png::CompressedTexture2D::521605484135127182::1507149290::1709473653::1::::<><>::
-::res://sprites/Hero/Running/::1709473654
-Running_000.png::CompressedTexture2D::8774080996568527133::1507149268::1709473653::1::::<><>::
-Running_001.png::CompressedTexture2D::646925067439335637::1507149268::1709473653::1::::<><>::
-Running_002.png::CompressedTexture2D::5259377907836891802::1507149268::1709473653::1::::<><>::
-Running_003.png::CompressedTexture2D::411374277911376236::1507149268::1709473653::1::::<><>::
-Running_004.png::CompressedTexture2D::8760716111274800419::1507149268::1709473653::1::::<><>::
-Running_005.png::CompressedTexture2D::1993322736454046907::1507149268::1709473653::1::::<><>::
-Running_006.png::CompressedTexture2D::422287458167037632::1507149268::1709473653::1::::<><>::
-Running_007.png::CompressedTexture2D::6344591138944914045::1507149268::1709473653::1::::<><>::
-Running_008.png::CompressedTexture2D::1539970309949865307::1507149268::1709473653::1::::<><>::
-Running_009.png::CompressedTexture2D::5577401063890980759::1507149268::1709473654::1::::<><>::
-Running_010.png::CompressedTexture2D::5088130211188623207::1507149268::1709473654::1::::<><>::
-Running_011.png::CompressedTexture2D::5947456475999160102::1507149268::1709473654::1::::<><>::
-::res://sprites/Hero/Slashing/::1709473654
-Slashing_000.png::CompressedTexture2D::3699351908161312983::1507149222::1709473654::1::::<><>::
-Slashing_001.png::CompressedTexture2D::6852445341340845107::1507149224::1709473652::1::::<><>::
-Slashing_002.png::CompressedTexture2D::2666392078786489337::1507149224::1709473652::1::::<><>::
-Slashing_003.png::CompressedTexture2D::2557528350781693113::1507149224::1709473652::1::::<><>::
-Slashing_004.png::CompressedTexture2D::2768887158314887336::1507149224::1709473652::1::::<><>::
-Slashing_005.png::CompressedTexture2D::5376124203427775826::1507149224::1709473652::1::::<><>::
-Slashing_006.png::CompressedTexture2D::6071549498038639364::1507149224::1709473652::1::::<><>::
-Slashing_007.png::CompressedTexture2D::9042662247800778753::1507149224::1709473652::1::::<><>::
-Slashing_008.png::CompressedTexture2D::7060212132058966514::1507149224::1709473652::1::::<><>::
-Slashing_009.png::CompressedTexture2D::3183052311835870063::1507149224::1709473652::1::::<><>::
-Slashing_010.png::CompressedTexture2D::6686142008199545418::1507149224::1709473652::1::::<><>::
-Slashing_011.png::CompressedTexture2D::4024887018144463229::1507149224::1709473652::1::::<><>::
-::res://sprites/Hero/Slashing in The Air/::1709473653
-Slashing in The Air_000.png::CompressedTexture2D::6871428109480418609::1507149334::1709473652::1::::<><>::
-Slashing in The Air_001.png::CompressedTexture2D::1371100132355487798::1507149336::1709473652::1::::<><>::
-Slashing in The Air_002.png::CompressedTexture2D::2196133415924333471::1507149336::1709473652::1::::<><>::
-Slashing in The Air_003.png::CompressedTexture2D::7384366961480337229::1507149336::1709473652::1::::<><>::
-Slashing in The Air_004.png::CompressedTexture2D::8452760317649245620::1507149336::1709473652::1::::<><>::
-Slashing in The Air_005.png::CompressedTexture2D::2020119535455550889::1507149336::1709473653::1::::<><>::
-Slashing in The Air_006.png::CompressedTexture2D::5624942461183474493::1507149336::1709473653::1::::<><>::
-Slashing in The Air_007.png::CompressedTexture2D::8390527034917904171::1507149336::1709473653::1::::<><>::
-Slashing in The Air_008.png::CompressedTexture2D::4022369247657412014::1507149336::1709473653::1::::<><>::
-Slashing in The Air_009.png::CompressedTexture2D::5336366557077227450::1507149336::1709473653::1::::<><>::
-Slashing in The Air_010.png::CompressedTexture2D::1996566229200400021::1507149336::1709473653::1::::<><>::
-Slashing in The Air_011.png::CompressedTexture2D::4488954245768214881::1507149336::1709473653::1::::<><>::
-::res://sprites/Hero/Sliding/::1709473655
-Sliding_000.png::CompressedTexture2D::99626775842158211::1507149300::1709473653::1::::<><>::
-Sliding_001.png::CompressedTexture2D::5986527763431846498::1507149300::1709473653::1::::<><>::
-Sliding_002.png::CompressedTexture2D::3541957269907497381::1507149300::1709473654::1::::<><>::
-Sliding_003.png::CompressedTexture2D::3917252205115845100::1507149300::1709473655::1::::<><>::
-Sliding_004.png::CompressedTexture2D::7595262358880825805::1507149300::1709473655::1::::<><>::
-Sliding_005.png::CompressedTexture2D::8942581185071078393::1507149300::1709473655::1::::<><>::
-::res://sprites/Hero/Throwing/::1709473655
-Throwing_000.png::CompressedTexture2D::2866934358122719545::1507149234::1709473655::1::::<><>::
-Throwing_001.png::CompressedTexture2D::1938602269789884069::1507149234::1709473655::1::::<><>::
-Throwing_002.png::CompressedTexture2D::1902633408441922641::1507149234::1709473655::1::::<><>::
-Throwing_003.png::CompressedTexture2D::8876479373420260166::1507149234::1709473655::1::::<><>::
-Throwing_004.png::CompressedTexture2D::8108055690159865792::1507149234::1709473655::1::::<><>::
-Throwing_005.png::CompressedTexture2D::1100217585286989940::1507149234::1709473655::1::::<><>::
-Throwing_006.png::CompressedTexture2D::7418380232726202672::1507149234::1709473655::1::::<><>::
-Throwing_007.png::CompressedTexture2D::1012825893309940391::1507149234::1709473655::1::::<><>::
-Throwing_008.png::CompressedTexture2D::2991398593306659591::1507149234::1709473655::1::::<><>::
-Throwing_009.png::CompressedTexture2D::6101870262611776532::1507149236::1709473655::1::::<><>::
-Throwing_010.png::CompressedTexture2D::5861119733925265834::1507149236::1709473655::1::::<><>::
-Throwing_011.png::CompressedTexture2D::7047577531614898132::1507149236::1709473655::1::::<><>::
-::res://sprites/Hero/Throwing in The Air/::1709473655
-Throwing in The Air_000.png::CompressedTexture2D::7719537693396413809::1507149366::1709473655::1::::<><>::
-Throwing in The Air_001.png::CompressedTexture2D::6958679697580880433::1507149366::1709473655::1::::<><>::
-Throwing in The Air_002.png::CompressedTexture2D::7642958907567317440::1507149366::1709473655::1::::<><>::
-Throwing in The Air_003.png::CompressedTexture2D::222025995856433474::1507149366::1709473655::1::::<><>::
-Throwing in The Air_004.png::CompressedTexture2D::5595299794866203853::1507149366::1709473655::1::::<><>::
-Throwing in The Air_005.png::CompressedTexture2D::4614134992903697153::1507149366::1709473655::1::::<><>::
-Throwing in The Air_006.png::CompressedTexture2D::3526135017145046219::1507149366::1709473655::1::::<><>::
-Throwing in The Air_007.png::CompressedTexture2D::161071942612026258::1507149366::1709473655::1::::<><>::
-Throwing in The Air_008.png::CompressedTexture2D::6587871336448014450::1507149366::1709473655::1::::<><>::
-Throwing in The Air_009.png::CompressedTexture2D::978239108816312672::1507149366::1709473655::1::::<><>::
-Throwing in The Air_010.png::CompressedTexture2D::5724173922536276137::1507149366::1709473654::1::::<><>::
-Throwing in The Air_011.png::CompressedTexture2D::98087525196436004::1507149366::1709473654::1::::<><>::
-::res://sprites/Hero/Walking/::1709473654
-Walking_000.png::CompressedTexture2D::4131177159799785939::1507149256::1709473654::1::::<><>::
-Walking_001.png::CompressedTexture2D::5203279642118202796::1507149256::1709473654::1::::<><>::
-Walking_002.png::CompressedTexture2D::8094047788316811109::1507149256::1709473654::1::::<><>::
-Walking_003.png::CompressedTexture2D::2290543301182196305::1507149256::1709473654::1::::<><>::
-Walking_004.png::CompressedTexture2D::1851766013020046941::1507149256::1709473654::1::::<><>::
-Walking_005.png::CompressedTexture2D::4850758603103802650::1507149258::1709473654::1::::<><>::
-Walking_006.png::CompressedTexture2D::3894048748408839742::1507149258::1709473654::1::::<><>::
-Walking_007.png::CompressedTexture2D::2521535651261376870::1507149258::1709473654::1::::<><>::
-Walking_008.png::CompressedTexture2D::4203008236736064322::1507149258::1709473654::1::::<><>::
-Walking_009.png::CompressedTexture2D::5890011594380013609::1507149258::1709473654::1::::<><>::
-Walking_010.png::CompressedTexture2D::5348577545200971146::1507149258::1709473654::1::::<><>::
-Walking_011.png::CompressedTexture2D::8447318851899163102::1507149258::1709473654::1::::<><>::
-Walking_012.png::CompressedTexture2D::2818936601513064960::1507149258::1709473654::1::::<><>::
-Walking_013.png::CompressedTexture2D::3610917197051943790::1507149258::1709473654::1::::<><>::
-Walking_014.png::CompressedTexture2D::385104009036677703::1507149258::1709473654::1::::<><>::
-Walking_015.png::CompressedTexture2D::3449577526551693379::1507149258::1709473654::1::::<><>::
-Walking_016.png::CompressedTexture2D::2683569489943914297::1507149258::1709473654::1::::<><>::
-Walking_017.png::CompressedTexture2D::2506557728792159784::1507149258::1709473654::1::::<><>::
-Walking_018.png::CompressedTexture2D::5352302854165798051::1507149258::1709473654::1::::<><>::
-Walking_019.png::CompressedTexture2D::5675715411391857303::1507149258::1709473654::1::::<><>::
-Walking_020.png::CompressedTexture2D::2463447899610762892::1507149258::1709473654::1::::<><>::
-Walking_021.png::CompressedTexture2D::2408811843877419181::1507149258::1709473654::1::::<><>::
-Walking_022.png::CompressedTexture2D::9188512020670606154::1507149258::1709473654::1::::<><>::
-Walking_023.png::CompressedTexture2D::2726014263656599441::1507149258::1709473654::1::::<><>::
+::res://sprites/Hero/::1710091120
+HeroSprite.png::CompressedTexture2D::3102553783017070737::1710082815::1710082843::1::::<><>::
+::res://sprites/Hero/Dying/::1710105882
+HeroDing_01.png::CompressedTexture2D::6578449864839266822::1710090886::1710091250::1::::<><>::
+HeroDing_02.png::CompressedTexture2D::4388340388604427156::1710090886::1710091250::1::::<><>::
+HeroDing_03.png::CompressedTexture2D::802200795058090953::1710090886::1710091250::1::::<><>::
+HeroDing_04.png::CompressedTexture2D::1480635796371111990::1710090886::1710091250::1::::<><>::
+HeroDing_05.png::CompressedTexture2D::4472552071303638281::1710090886::1710091250::1::::<><>::
+HeroDing_06.png::CompressedTexture2D::1174101084788916074::1710090886::1710091250::1::::<><>::
+HeroDing_07.png::CompressedTexture2D::5079623249647983590::1710090886::1710091250::1::::<><>::
+HeroDing_08.png::CompressedTexture2D::5624901150689614988::1710090886::1710091250::1::::<><>::
+HeroDing_09.png::CompressedTexture2D::2651926697940531424::1710090887::1710091250::1::::<><>::
+::res://sprites/Hero/Hurt/::1710091250
+HeroHurt_01.png::CompressedTexture2D::2128208014515575897::1710090920::1710091250::1::::<><>::
+HeroHurt_02.png::CompressedTexture2D::6948910198545396249::1710090920::1710091250::1::::<><>::
+::res://sprites/Hero/Idle/::1710082602
+HeroIdle_01.png::CompressedTexture2D::1923942930832470002::1710082421::1710082476::1::::<><>::
+HeroIdle_02.png::CompressedTexture2D::7567965482397108768::1710082421::1710082476::1::::<><>::

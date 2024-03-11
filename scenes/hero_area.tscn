@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://djmrs2qdfuhry"]
+[gd_scene load_steps=5 format=3 uid="uid://djmrs2qdfuhry"]
 
 [ext_resource type="Script" path="res://scripts/hero_area.gd" id="1_o4bai"]
-[ext_resource type="Texture2D" uid="uid://beekvkt5jc4lh" path="res://resources/animations/hero_idle.tres" id="2_yatcf"]
+[ext_resource type="Texture2D" uid="uid://bn5t08bdch6et" path="res://resources/animations/hero_idle.tres" id="2_yatcf"]
+[ext_resource type="Texture2D" uid="uid://dhkbkhwg1a2jl" path="res://resources/animations/hero_hurt.tres" id="3_0mad5"]
+[ext_resource type="Texture2D" uid="uid://bsgbcx5g4amwi" path="res://resources/animations/hero_dying.tres" id="4_4ni31"]
 
 [node name="HeroArea" type="Control"]
 layout_mode = 3
@@ -11,8 +13,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o4bai")
+idle_animation = ExtResource("2_yatcf")
+hurt_animation = ExtResource("3_0mad5")
+death_animation = ExtResource("4_4ni31")
 
 [node name="Background" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,12 +34,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = -40
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = -30
-theme_override_constants/margin_bottom = -40
+theme_override_constants/margin_bottom = -30
 
 [node name="PlayerSprite" type="TextureRect" parent="MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_yatcf")
 expand_mode = 1
@@ -45,14 +50,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -29.5
-offset_right = 29.5
-offset_bottom = 23.0
+offset_left = -29.0
+offset_top = 14.0
+offset_right = 30.0
+offset_bottom = 63.0
 grow_horizontal = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-text = "Health:
-"
+text = "Health
+10/10"
+horizontal_alignment = 1
 
 [node name="DefenseLabel" type="Label" parent="."]
 unique_name_in_owner = true
@@ -65,7 +72,9 @@ offset_top = -46.0
 offset_right = 87.0
 offset_bottom = -23.0
 grow_vertical = 0
-text = "Damage"
+text = "Damage
+1"
+horizontal_alignment = 1
 
 [node name="AttackLabel" type="Label" parent="."]
 unique_name_in_owner = true
@@ -81,4 +90,6 @@ offset_right = -25.0
 offset_bottom = -23.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Attack"
+text = "Attack
+2"
+horizontal_alignment = 1

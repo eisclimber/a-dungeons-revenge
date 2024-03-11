@@ -1,50 +1,33 @@
-[gd_resource type="AnimatedTexture" load_steps=16 format=3 uid="uid://bad26uumqnk0j"]
+[gd_resource type="AnimatedTexture" load_steps=10 format=3 uid="uid://bsgbcx5g4amwi"]
 
-[ext_resource type="Texture2D" uid="uid://dlnc5l815r80" path="res://sprites/Hero/Dying/Dying_000.png" id="1_bst0q"]
-[ext_resource type="Texture2D" uid="uid://cnrg88xvmfe44" path="res://sprites/Hero/Dying/Dying_001.png" id="2_glgk3"]
-[ext_resource type="Texture2D" uid="uid://cijvjpgf67mwn" path="res://sprites/Hero/Dying/Dying_010.png" id="3_1jego"]
-[ext_resource type="Texture2D" uid="uid://bhvbd48il2mkl" path="res://sprites/Hero/Dying/Dying_011.png" id="4_sykm4"]
-[ext_resource type="Texture2D" uid="uid://bn4bkj4lcw233" path="res://sprites/Hero/Dying/Dying_012.png" id="5_2vix1"]
-[ext_resource type="Texture2D" uid="uid://pkm22cqvnjf4" path="res://sprites/Hero/Dying/Dying_013.png" id="6_j0kar"]
-[ext_resource type="Texture2D" uid="uid://ba5on736x4pe5" path="res://sprites/Hero/Dying/Dying_014.png" id="7_yxmel"]
-[ext_resource type="Texture2D" uid="uid://blglhkr37kqs2" path="res://sprites/Hero/Dying/Dying_002.png" id="8_m0ih6"]
-[ext_resource type="Texture2D" uid="uid://d0sflrr34k3vi" path="res://sprites/Hero/Dying/Dying_003.png" id="9_kq5vt"]
-[ext_resource type="Texture2D" uid="uid://yrk7mbhl3elb" path="res://sprites/Hero/Dying/Dying_004.png" id="10_t6v6c"]
-[ext_resource type="Texture2D" uid="uid://b8gr7645o8myc" path="res://sprites/Hero/Dying/Dying_005.png" id="11_mbg6s"]
-[ext_resource type="Texture2D" uid="uid://cebp2bi54lben" path="res://sprites/Hero/Dying/Dying_006.png" id="12_upr5p"]
-[ext_resource type="Texture2D" uid="uid://7tqjv3njvdbp" path="res://sprites/Hero/Dying/Dying_007.png" id="13_nsc88"]
-[ext_resource type="Texture2D" uid="uid://bvg68f5v2x7uq" path="res://sprites/Hero/Dying/Dying_008.png" id="14_tndmn"]
-[ext_resource type="Texture2D" uid="uid://cxkkcb6q1akcb" path="res://sprites/Hero/Dying/Dying_009.png" id="15_w3814"]
+[ext_resource type="Texture2D" uid="uid://c0ywdxa0g70ba" path="res://sprites/Hero/Dying/HeroDing_01.png" id="1_1cx46"]
+[ext_resource type="Texture2D" uid="uid://b3r0lb08yj285" path="res://sprites/Hero/Dying/HeroDing_02.png" id="2_344q6"]
+[ext_resource type="Texture2D" uid="uid://loueofi3dfmf" path="res://sprites/Hero/Dying/HeroDing_03.png" id="3_4pxn4"]
+[ext_resource type="Texture2D" uid="uid://vdh4cwpr0occ" path="res://sprites/Hero/Dying/HeroDing_04.png" id="4_t3mbi"]
+[ext_resource type="Texture2D" uid="uid://b4ysjqyma2yvh" path="res://sprites/Hero/Dying/HeroDing_05.png" id="5_evwl8"]
+[ext_resource type="Texture2D" uid="uid://qy0jj75i00dy" path="res://sprites/Hero/Dying/HeroDing_06.png" id="6_qsk0s"]
+[ext_resource type="Texture2D" uid="uid://cemuwgu3xo1p7" path="res://sprites/Hero/Dying/HeroDing_07.png" id="7_exx4e"]
+[ext_resource type="Texture2D" uid="uid://cme0kg73t4i7u" path="res://sprites/Hero/Dying/HeroDing_08.png" id="8_l7l8j"]
+[ext_resource type="Texture2D" uid="uid://bd1u30eimp3bw" path="res://sprites/Hero/Dying/HeroDing_09.png" id="9_gdk6b"]
 
 [resource]
-frames = 15
-speed_scale = 12.0
-frame_0/texture = ExtResource("1_bst0q")
-frame_1/texture = ExtResource("2_glgk3")
+frames = 9
+one_shot = true
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_1cx46")
+frame_1/texture = ExtResource("2_344q6")
 frame_1/duration = 1.0
-frame_2/texture = ExtResource("8_m0ih6")
+frame_2/texture = ExtResource("3_4pxn4")
 frame_2/duration = 1.0
-frame_3/texture = ExtResource("9_kq5vt")
+frame_3/texture = ExtResource("4_t3mbi")
 frame_3/duration = 1.0
-frame_4/texture = ExtResource("10_t6v6c")
+frame_4/texture = ExtResource("5_evwl8")
 frame_4/duration = 1.0
-frame_5/texture = ExtResource("11_mbg6s")
+frame_5/texture = ExtResource("6_qsk0s")
 frame_5/duration = 1.0
-frame_6/texture = ExtResource("12_upr5p")
+frame_6/texture = ExtResource("7_exx4e")
 frame_6/duration = 1.0
-frame_7/texture = ExtResource("13_nsc88")
+frame_7/texture = ExtResource("8_l7l8j")
 frame_7/duration = 1.0
-frame_8/texture = ExtResource("14_tndmn")
+frame_8/texture = ExtResource("9_gdk6b")
 frame_8/duration = 1.0
-frame_9/texture = ExtResource("15_w3814")
-frame_9/duration = 1.0
-frame_10/texture = ExtResource("3_1jego")
-frame_10/duration = 1.0
-frame_11/texture = ExtResource("4_sykm4")
-frame_11/duration = 1.0
-frame_12/texture = ExtResource("5_2vix1")
-frame_12/duration = 1.0
-frame_13/texture = ExtResource("6_j0kar")
-frame_13/duration = 1.0
-frame_14/texture = ExtResource("7_yxmel")
-frame_14/duration = 1.0

@@ -43,7 +43,7 @@ func draw_card() -> void:
 	var target_pos = cards_anchor.get_rect().position - deck_pos + (cards_anchor.get_child_count() + 2) * Vector2(120, 0)
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position:x", target_pos.x, draw_duration)
-	await tween.tween_callback(reparent_drawn_card_to_hand)
+	tween.tween_callback(reparent_drawn_card_to_hand)
 
 
 func reparent_drawn_card_to_hand() -> void:
@@ -84,3 +84,4 @@ func _on_dungeon_generator_dungeon_created(_astar: AStar2D, _start_pos: Vector2i
 
 func _on_start_button_pressed() -> void:
 	cards_placement_confirmed.emit()
+	$StartButton.disabled = true

@@ -51,6 +51,8 @@ func _ready() -> void:
 func generate_dungeon() -> void:
 	start_pos = dungeon_map.get_used_rect().get_center()
 	boss_pos = _calculate_boss_pos()
+	dungeon_map.clear_layer(HAZARD_LAYER)
+	hazards.clear()
 	var path = _generate_hot_path(start_pos, boss_pos)
 	dungeon_astar = _generate_rooms_along_path(path)
 	update_dungeon_tiles(dungeon_astar, start_pos, boss_pos)
@@ -70,7 +72,7 @@ func update_dungeon_tiles(_astar: AStar2D, _start_pos: Vector2i, _end_pos: Vecto
 			
 			var neighbors = DIRECTIONS.map(func(dir): return point + dir)
 			var neighbor_ids = neighbors.map(id)
-			var has_neighbors = neighbor_ids.map(func(id): return _astar.are_points_connected(id, point_id, true))
+			var has_neighbors = neighbor_ids.map(func(nid): return _astar.are_points_connected(nid, point_id, true))
 			var tile_idx = dungeon_atlas_idx_from_connections(has_neighbors)
 			
 			if point == _start_pos:
@@ -145,7 +147,6 @@ func recursive_add_room(_astar: AStar2D, _point: Vector2i, _connectivity: float,
 
 func _calculate_boss_pos() -> Vector2i:
 	var dungeon_pos = dungeon_map.get_used_rect().position
-	var dungeon_size = dungeon_map.get_used_rect().size
 	var dungeon_end = dungeon_map.get_used_rect().end
 	var dungeon_center = dungeon_map.get_used_rect().get_center()
 	var boss_max_dist = max(dungeon_size.x / 2, dungeon_size.y / 2)
@@ -181,7 +182,7 @@ func _get_astar_char(_astar: AStar2D, _point: Vector2i, _point_id: int, _special
 	
 	var neighbors: Array = DIRECTIONS.map(func(dir): return _point + dir)
 	var neighbor_ids: Array = neighbors.map(id)
-	var has_neighbors: Array = neighbor_ids.map(func(id): return _astar.are_points_connected(id, _point_id, true))
+	var has_neighbors: Array = neighbor_ids.map(func(nid): return _astar.are_points_connected(nid, _point_id, true))
 	var char_idx = 16 * int(_special) + dungeon_atlas_idx_from_connections(has_neighbors)
 	
 	return ASTAR_CHARS[char_idx]

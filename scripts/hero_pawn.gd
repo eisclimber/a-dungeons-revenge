@@ -9,4 +9,4 @@ func _on_hero_stats_player_stats_changed(_effect: int, _health: int, _max_health
 
 
 func _on_hero_stats_player_dead(_num_effects: int) -> void:
-	print("player ded Hero Pawn") # TODO play Animation & Sound
+	pass #print("player ded Hero Pawn") # TODO play Animation & Sound

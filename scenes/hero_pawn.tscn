@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dg4wf1k0kp1kj"]
 
 [ext_resource type="Script" path="res://scripts/hero_pawn.gd" id="1_iq770"]
-[ext_resource type="Texture2D" uid="uid://djih7vo3x6n81" path="res://icon.svg" id="2_uoven"]
+[ext_resource type="Texture2D" uid="uid://bkg5uwj4rxc78" path="res://sprites/Hero/HeroSprite.png" id="2_h5dp3"]
 
 [node name="HeroPawn" type="Node2D"]
 position = Vector2(224, 160)
 script = ExtResource("1_iq770")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_uoven")
+texture = ExtResource("2_h5dp3")

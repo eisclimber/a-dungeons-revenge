@@ -1,0 +1,131 @@
+[gd_scene load_steps=2 format=3 uid="uid://s80opd3u565e"]
+
+[ext_resource type="Script" path="res://scripts/tutorial_scene.gd" id="1_qq2lx"]
+
+[node name="TutorialScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qq2lx")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Panel1" type="Panel" parent="Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InnerMargin" type="MarginContainer" parent="Margin/Panel1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 140
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin/Panel1/InnerMargin"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Label" type="Label" parent="Margin/Panel1/InnerMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Welcome To The Dungeon!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Margin/Panel1/InnerMargin/VBoxContainer"]
+custom_minimum_size = Vector2(780, 240)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Congratulations! You have been promoted to \"Chief Dungeon Designer\"
+to get rid of these persky heros trying to assault your master.
+
+Armed with the \"Royal Deck of Horrors\", 
+you prepare to lay out the most terrifying and cruel dungeon anyone has ever seen.
+
+Keep your master safe but also make the heros suffer for as long as possible!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonStep1" type="Button" parent="Margin/Panel1/InnerMargin/VBoxContainer"]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Let's Go!"
+
+[node name="Panel2" type="Panel" parent="Margin"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="InnerMargin" type="MarginContainer" parent="Margin/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 140
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin/Panel2/InnerMargin"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Label" type="Label" parent="Margin/Panel2/InnerMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Margin/Panel2/InnerMargin/VBoxContainer"]
+custom_minimum_size = Vector2(780, 240)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Drag and drop your hazard-cards from the bottom onto a room of the dungeon.
+
+After all cards have been placed, let the hero proceed through the dungeon by pressing on the deck on the bottom right. 
+
+You are done once he is dead (duh!). 
+Don't let him get to strong (Attack or Defense >= 8), otherwisetey will kill our master!
+
+
+Remember: The cleanup crew asked us to keep the throne (red) and the start (green) room clean and only use one card per room!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonStep2" type="Button" parent="Margin/Panel2/InnerMargin/VBoxContainer"]
+custom_minimum_size = Vector2(200, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Let me Play!1!"
+
+[connection signal="pressed" from="Margin/Panel1/InnerMargin/VBoxContainer/ButtonStep1" to="." method="_on_button_step_1_pressed"]
+[connection signal="pressed" from="Margin/Panel2/InnerMargin/VBoxContainer/ButtonStep2" to="." method="_on_button_step_2_pressed"]

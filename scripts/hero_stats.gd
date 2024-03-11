@@ -4,7 +4,6 @@ extends Node
 signal player_dead(_num_effects: int)
 signal player_stats_changed(_effect: int, _health: int, _max_health: int, _attack: int, _defense: int, _num_effects: int)
 
-
 var health := 10
 var max_health := 10
 var attack := 2
@@ -34,7 +33,8 @@ func apply_card_data(_card_data: CardData) -> void:
 			health = min(health + value1, max_health)
 			num_effects += 1
 		CardData.EFFECTS.MAX_HEALTH:
-			max_health *= (100.0 + value1) / 100.0
+			max_health += value1
+			health += value1
 			num_effects += 1
 		CardData.EFFECTS.ATTACK:
 			attack += value1
@@ -44,7 +44,7 @@ func apply_card_data(_card_data: CardData) -> void:
 			num_effects += 1
 		CardData.EFFECTS.FIGHT: # value1: monster attack; value2: monster defense; value3: monster health
 			var in_damage = max(value1 - defense, 0.0)
-			var out_damage = max(attack - value3, 0.0)
+			var out_damage = max(attack - value2, 0.0)
 			if in_damage == 0: # Does not hurt -> No fight
 				num_effects += 1
 			elif out_damage == 0: # Not possible to win

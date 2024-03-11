@@ -8,7 +8,7 @@ script = ExtResource("2_8dwfb")
 icon = ExtResource("1_8t4fg")
 title = "Ghostopus"
 description = "What is scarier than a Ghost?
-Two Ghosts... or one with tentacles!"
+A Ghostopus!"
 effect = 6
 value1 = 5
 value2 = 5

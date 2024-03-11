@@ -1,3 +1,3 @@
+AnimatedTexture
 CardData
 Resource
-AnimatedTexture

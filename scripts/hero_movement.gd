@@ -54,8 +54,6 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 		var neighbor = _room_pos + dir
 		var neighbor_id = id(neighbor)
 		
-		#printt(neighbor, unid(neighbor_id), _room_pos) # TODO  WTF
-		
 		if neighbor.x < 0 or neighbor.x >= dungeon_size.x \
 				or neighbor.y < 0 or neighbor.y >= dungeon_size.y:
 			
@@ -72,12 +70,22 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 	if !_initial:
 		_apply_room_effect(room_id)
 	#get_tree().paused = true
-	await get_tree().create_timer(visit_duration).timeout
+	if is_inside_tree(): # Prevents errors on game over
+		await get_tree().create_timer(visit_duration).timeout
 	if !_initial:
 		room_exiting.emit(room_id)
 
 
 func _apply_room_effect(_room_id: int) -> void:
+	#var res = ""
+	#for y in dungeon_size.y:
+		#for x in dungeon_size.x:
+			#if (dungeon_area.hazards[id(Vector2i(x, y))]):
+				#res += " " + str(dungeon_area.hazards[id(Vector2i(x, y))].effect)
+			#else:
+				#res += " x"
+		#res += "\n"
+	#print(res)
 	var card_data = dungeon_area.hazards[_room_id]
 	room_effect_triggered.emit(_room_id, card_data)
 
@@ -115,7 +123,7 @@ func _continue_on_path(_visit_next: bool = true) -> void:
 	
 	# Bos reached
 	if current_room_id == id(boss_pos):
-		print("Boss")
+		boss_reached.emit()
 		return
 	
 	# Nothing to do if not

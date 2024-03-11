@@ -25,7 +25,8 @@ grow_vertical = 2
 script = ExtResource("1_7wh2y")
 cards = Array[Resource("res://scripts/card_data.gd")]([ExtResource("2_6rbsw"), ExtResource("3_7vnpg"), ExtResource("4_4ysrp"), ExtResource("5_s8vdw"), ExtResource("6_sy4uw"), ExtResource("7_6qkrg"), ExtResource("8_tf36o"), ExtResource("9_p8s1m"), ExtResource("10_n7m58"), ExtResource("11_0t61t")])
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

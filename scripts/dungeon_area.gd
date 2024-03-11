@@ -29,8 +29,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	center_dungeon_map()
 	# Resize hazards
-	hazards = []
-	hazards.resize(dungeon_map.get_used_rect().size.x * dungeon_map.get_used_rect().size.y)
+	clear_hazards()
 
 
 func center_dungeon_map() -> void:
@@ -99,3 +98,8 @@ func show_room_preview(_tile_pos : Vector2i, _atlas_tile_pos: Vector2i) -> void:
 		dungeon_map.set_cell(PREVIEW_LAYER, _tile_pos, HAZARD_TILE_ID, _atlas_tile_pos)
 	
 	prev_preview_tile = _tile_pos
+
+
+func clear_hazards() -> void:
+	hazards = []
+	hazards.resize(dungeon_map.get_used_rect().size.x * dungeon_map.get_used_rect().size.y)

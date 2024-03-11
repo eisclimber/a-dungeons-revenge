@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://xdmrotg8fr25"]
+
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_bb3jo"]
+[ext_resource type="PackedScene" uid="uid://3u4v3n27hupq" path="res://scenes/main_menu.tscn" id="2_6ou7n"]
+[ext_resource type="PackedScene" uid="uid://do7yo7thd4stg" path="res://scenes/game.tscn" id="3_hnq7l"]
+
+[node name="GameOverDeadScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bb3jo")
+menu_scene = ExtResource("2_6ou7n")
+game_scene = ExtResource("3_hnq7l")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Vbox" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="DeadLabel" type="Label" parent="Vbox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.741176, 0, 0, 1)
+text = "Good Job! He's Dead, Jim."
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Vbox"]
+layout_mode = 2
+text = "You let him suffer in x Rooms"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="Vbox"]
+layout_mode = 2
+text = "Keep Torturing"
+
+[node name="MenuButton" type="Button" parent="Vbox"]
+layout_mode = 2
+text = "Enough Torture"
+
+[connection signal="pressed" from="Vbox/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Vbox/MenuButton" to="." method="_on_menu_button_pressed"]
