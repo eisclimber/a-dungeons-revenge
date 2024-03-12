@@ -9,7 +9,7 @@ signal player_stats_changed(_effect: int, _health: int, _max_health: int, _attac
 
 var health := 10
 var max_health := 10
-var attack := 20
+var attack := 2
 var defense := 0
 
 var num_effects := 0
