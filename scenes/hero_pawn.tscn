@@ -9,3 +9,5 @@ script = ExtResource("1_iq770")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_h5dp3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -10,7 +10,7 @@ title = "Ghostopus"
 description = "What is scarier than a Ghost?
 A Ghostopus!"
 effect = 6
-value1 = 5
-value2 = 5
-value3 = 5
+value1 = 2
+value2 = 2
+value3 = 3
 atlas_tile_pos = Vector2i(4, 1)

@@ -16,6 +16,8 @@ signal cards_placement_confirmed()
 @onready var cards_anchor: HBoxContainer = %CardsAnchor
 @onready var deck_anchor: TextureButton = %StartButton
 
+@onready var ui_sound_player: AudioStreamPlayer = %UISoundPlayer
+
 var card_packed = preload("res://scenes/card.tscn")
 
 func _ready() -> void:
@@ -78,10 +80,18 @@ func _on_all_cards_placed() -> void:
 func _on_dungeon_generator_dungeon_created(_astar: AStar2D, _start_pos: Vector2i, _boss_pos: Vector2i, _num_rooms: int) -> void:
 	$StartButton.disabled = true
 	$StartButton/Label.add_theme_color_override("font_color", DISABLED_LABEL_COLOR)
-	var num_cards = clampi(_num_rooms - 2, 0, max_cards)
+	var num_cards = clampi(_num_rooms - 2, 0, max_cards) # -2 for the start and boss room
 	draw_cards(num_cards)
 
 
 func _on_start_button_pressed() -> void:
 	cards_placement_confirmed.emit()
 	$StartButton.disabled = true
+
+
+func _on_start_button_button_down() -> void:
+	Sounds.play_pressed_sound(ui_sound_player)
+
+
+func _on_start_button_button_up() -> void:
+	Sounds.play_released_sound(ui_sound_player)

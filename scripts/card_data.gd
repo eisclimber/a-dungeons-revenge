@@ -11,3 +11,4 @@ enum EFFECTS { NONE, DAMAGE, HEAL, MAX_HEALTH, ATTACK, DEFENSE, FIGHT }
 @export var value2 := 0
 @export var value3 := 0
 @export var atlas_tile_pos := Vector2i()
+@export var one_shot := true

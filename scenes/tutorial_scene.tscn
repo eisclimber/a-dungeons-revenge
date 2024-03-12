@@ -69,12 +69,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 20
 text = "Congratulations! You have been promoted to \"Chief Dungeon Designer\"
-to get rid of these persky heros trying to assault your master.
+to get rid of these pesky heroes trying to assault your master.
 
 Armed with the \"Royal Deck of Horrors\", 
 you prepare to lay out the most terrifying and cruel dungeon anyone has ever seen.
 
-Keep your master safe but also make the heros suffer for as long as possible!"
+Keep your master safe but also make the heroes suffer for as long as possible!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -88,7 +88,6 @@ text = "Let's Go!"
 
 [node name="Panel2" type="Panel" parent="Margin"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
 [node name="InnerMargin" type="MarginContainer" parent="Margin/Panel2"]
@@ -122,9 +121,9 @@ custom_minimum_size = Vector2(780, 240)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 20
-text = "Drag and drop your hazard-cards from the bottom onto a room of the dungeon. Some cards are positive or negative effects, while othes send your fellow colleagues in for a fight.
+text = "Drag and drop your hazard-cards from the bottom onto a room of the dungeon. Some cards are positive or negative effects, while others send your fellow colleagues in for a fight.
 
-In a fight both parties inflict damage based on the difference of their attack and the opponents defense. Rinse and repeat unitl someone dies.
+In a fight, both parties inflict damage based on the difference of their attack and the opponent's defense. Rinse and repeat until someone dies.
 
 After all cards have been placed, let the hero proceed through the dungeon by pressing on the deck on the bottom right."
 horizontal_alignment = 1
@@ -140,7 +139,6 @@ text = "Gotcha!"
 
 [node name="Panel3" type="Panel" parent="Margin"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
 [node name="InnerMargin" type="MarginContainer" parent="Margin/Panel3"]
@@ -177,7 +175,7 @@ theme_override_font_sizes/font_size = 20
 text = "Remember: The cleanup crew asked us to keep the throne (red) and the start (green) room clean and only use one card per room!
 
 You are done once he is dead (duh!) 
-Don't let him get to strong (Attack or Defense more than 7), otherwisetey will kill our master!"
+Don't let him get too strong (Attack or Defense more than 7), otherwise they will kill our master!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -189,6 +187,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Let me Play!1!"
 
+[node name="UISoundPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="button_down" from="Margin/Panel1/InnerMargin/VBoxContainer/ButtonStep1" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Margin/Panel1/InnerMargin/VBoxContainer/ButtonStep1" to="." method="_on_button_step_1_pressed"]
+[connection signal="button_down" from="Margin/Panel2/InnerMargin/VBoxContainer/ButtonStep2" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Margin/Panel2/InnerMargin/VBoxContainer/ButtonStep2" to="." method="_on_button_step_2_pressed"]
+[connection signal="button_down" from="Margin/Panel3/InnerMargin/VBoxContainer/ButtonStep3" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Margin/Panel3/InnerMargin/VBoxContainer/ButtonStep3" to="." method="_on_button_step_3_pressed"]

@@ -60,3 +60,6 @@ layer_4/tile_data = PackedInt32Array()
 
 [node name="HeroPawn" parent="Margin/DungeonSpace/DungeonMap" instance=ExtResource("3_1hsr3")]
 position = Vector2(160, 96)
+
+[node name="MovePlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://8jws2a8rc4bj"]
+[gd_scene load_steps=9 format=3 uid="uid://8jws2a8rc4bj"]
 
 [ext_resource type="Texture2D" uid="uid://884wo05vivrd" path="res://sprites/CardFront.png" id="1_5v7jx"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_rregg"]
 [ext_resource type="Texture2D" uid="uid://qvsamfcdgevw" path="res://sprites/CardFront_Selected.png" id="2_38iuv"]
 [ext_resource type="Texture2D" uid="uid://b5p3teb4gi2ih" path="res://sprites/CardBack_Selected.png" id="3_p2grg"]
 [ext_resource type="Resource" uid="uid://cb5kks4i6b5eu" path="res://resources/card_data/CardData_Death.tres" id="5_h7exv"]
+[ext_resource type="Texture2D" uid="uid://8lxe4m2ylj0r" path="res://sprites/ArmorIcon.png" id="6_3wqwv"]
+[ext_resource type="Texture2D" uid="uid://bu1dy8s5ciyqn" path="res://sprites/HealthIcon.png" id="7_eyrpk"]
+[ext_resource type="Texture2D" uid="uid://cv1b6mfee53bc" path="res://sprites/AttackIcon.png" id="8_ww1hf"]
 
 [node name="Card" type="TextureButton"]
 custom_minimum_size = Vector2(120, 174)
@@ -58,19 +61,6 @@ mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="FightLabel" type="Label" parent="Margin/VBox/IconBackground"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = -8.0
-offset_right = 20.0
-offset_bottom = 15.0
-grow_horizontal = 2
-text = "Fight"
-
 [node name="TitleLabel" type="Label" parent="Margin/VBox"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 23)
@@ -87,3 +77,92 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 10
 text = "Stats"
 autowrap_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Stats" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = -10.0
+offset_right = 60.0
+offset_bottom = 30.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="DefenseIcon" type="TextureRect" parent="Stats"]
+layout_mode = 2
+texture = ExtResource("6_3wqwv")
+expand_mode = 3
+
+[node name="DefenseLabel" type="Label" parent="Stats/DefenseIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthIcon" type="TextureRect" parent="Stats"]
+layout_mode = 2
+texture = ExtResource("7_eyrpk")
+expand_mode = 3
+
+[node name="HealthLabel" type="Label" parent="Stats/HealthIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AttackIcon" type="TextureRect" parent="Stats"]
+layout_mode = 2
+texture = ExtResource("8_ww1hf")
+expand_mode = 3
+
+[node name="AttackLabel" type="Label" parent="Stats/AttackIcon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

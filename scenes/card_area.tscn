@@ -98,5 +98,10 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Start"
 
+[node name="UISoundPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
 [connection signal="all_cards_placed" from="." to="." method="_on_all_cards_placed"]
+[connection signal="button_down" from="StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_up" from="StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

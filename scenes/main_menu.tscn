@@ -103,7 +103,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.741176, 0, 0, 1)
 theme_override_constants/outline_size = 30
 theme_override_font_sizes/font_size = 64
-text = "Dungeon Revenge"
+text = "A Dungeon's Revenge"
 horizontal_alignment = 1
 
 [node name="Spacer" type="Control" parent="Vbox"]
@@ -238,5 +238,10 @@ texture = ExtResource("4_47ttw")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="UISoundPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="button_down" from="Vbox/PlayButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Vbox/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="button_down" from="Vbox/ExitButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Vbox/ExitButton" to="." method="_on_exit_button_pressed"]

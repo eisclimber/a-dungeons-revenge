@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xdmrotg8fr25"]
+[gd_scene load_steps=3 format=3 uid="uid://xdmrotg8fr25"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_bb3jo"]
+[ext_resource type="AudioStream" uid="uid://b122yoi7bpfrd" path="res://sounds/HeroDying.wav" id="2_5xd6p"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -97,5 +98,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Enough Torture"
 
+[node name="UISoundPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="FinalAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+stream = ExtResource("2_5xd6p")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="button_down" from="Margin/Panel1/Vbox/RetryButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Margin/Panel1/Vbox/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="button_down" from="Margin/Panel1/Vbox/MenuButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="Margin/Panel1/Vbox/MenuButton" to="." method="_on_menu_button_pressed"]

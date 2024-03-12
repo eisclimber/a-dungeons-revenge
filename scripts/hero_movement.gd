@@ -19,6 +19,8 @@ signal boss_reached()
 @export var move_duration := 1.0 # Seconds per room moved
 @export var visit_duration := 2.0 # Seconds per room visited
 
+@onready var hero_player: AudioStreamPlayer = %HeroPlayer
+
 var dungeon_size : Vector2i
 var num_rooms : int
 var max_num_rooms : int
@@ -82,17 +84,23 @@ func _visit_room(_room_pos: Vector2i, _initial: bool = false) -> void:
 
 
 func _apply_room_effect(_room_id: int) -> void:
-	#var res = ""
-	#for y in dungeon_size.y:
-		#for x in dungeon_size.x:
-			#if (dungeon_area.hazards[id(Vector2i(x, y))]):
-				#res += " " + str(dungeon_area.hazards[id(Vector2i(x, y))].effect)
-			#else:
-				#res += " x"
-		#res += "\n"
-	#print(res)
+	#_print_hazards()
 	var card_data = dungeon_area.hazards[_room_id]
 	room_effect_triggered.emit(_room_id, card_data)
+	if card_data and card_data.one_shot:
+		dungeon_area.clear_hazard_at(_room_id, unid(_room_id))
+
+
+func _print_hazards() -> void:
+	var res = ""
+	for y in dungeon_size.y:
+		for x in dungeon_size.x:
+			if (dungeon_area.hazards[id(Vector2i(x, y))]):
+				res += " " + str(dungeon_area.hazards[id(Vector2i(x, y))].effect)
+			else:
+				res += " x"
+		res += "\n"
+	print(res)
 
 
 func target_next_room() -> void:
@@ -137,6 +145,7 @@ func _continue_on_path(_visit_next: bool = true) -> void:
 		return
 	
 	var target_pos = dungeon_map.map_to_local(current_path[0])
+	Sounds.play_sound(hero_player, Sounds.HERO_WALK)
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_LINEAR).tween_property(hero, "position", target_pos, move_duration)
 	tween.tween_callback(_continue_on_path)

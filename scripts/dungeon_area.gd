@@ -19,6 +19,9 @@ const ROOM_TERRAIN_SET := 0
 
 @onready var dungeon_space : Control = %DungeonSpace
 @onready var dungeon_map : TileMap = %DungeonMap
+@onready var move_player: AudioStreamPlayer = %MovePlayer
+
+@export var ui_sound_player: AudioStreamPlayer
 
 var hazards: Array[CardData] = []
 var prev_preview_tile = NO_PREVIEW_TILE_POS
@@ -56,6 +59,8 @@ func _drop_data(_at_position: Vector2, _data: Variant) -> void:
 	# Remove preview and reset prev_preview_tile
 	dungeon_map.erase_cell(PREVIEW_LAYER, prev_preview_tile)
 	prev_preview_tile = NO_PREVIEW_TILE_POS
+	
+	Sounds.play_sound(ui_sound_player, Sounds.CARD_PLACE)
 	
 	_data["card_node"].queue_free()
 
@@ -103,3 +108,8 @@ func show_room_preview(_tile_pos : Vector2i, _atlas_tile_pos: Vector2i) -> void:
 func clear_hazards() -> void:
 	hazards = []
 	hazards.resize(dungeon_map.get_used_rect().size.x * dungeon_map.get_used_rect().size.y)
+
+
+func clear_hazard_at(_room_id: int, _room_pos: Vector2i) -> void:
+	hazards[_room_id] = null
+	dungeon_map.set_cell(HAZARD_LAYER, _room_pos, NO_TILE_ID)
