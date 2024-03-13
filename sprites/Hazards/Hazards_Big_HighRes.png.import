@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cogj6pxnk3v71"
-path="res://.godot/imported/Hazards_Big.png-10ba75f456aa5a80ab2ce94e33d32d47.ctex"
+uid="uid://di5byj7wy5w6v"
+path="res://.godot/imported/Hazards_Big_HighRes.png-2959d0a462f2b5d484aeb59342e078bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Hazards_Big.png"
-dest_files=["res://.godot/imported/Hazards_Big.png-10ba75f456aa5a80ab2ce94e33d32d47.ctex"]
+source_file="res://sprites/Hazards/Hazards_Big_HighRes.png"
+dest_files=["res://.godot/imported/Hazards_Big_HighRes.png-2959d0a462f2b5d484aeb59342e078bf.ctex"]
 
 [params]
 

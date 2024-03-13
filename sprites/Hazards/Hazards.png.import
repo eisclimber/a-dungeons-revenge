@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oqnfpvlryuad"
-path="res://.godot/imported/Rooms.png-048ed9920037be7bba23cde9c38252f7.ctex"
+uid="uid://drac81llgdaxc"
+path="res://.godot/imported/Hazards.png-89c7d8c6b20820edbd58521230c23371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Rooms.png"
-dest_files=["res://.godot/imported/Rooms.png-048ed9920037be7bba23cde9c38252f7.ctex"]
+source_file="res://sprites/Hazards/Hazards.png"
+dest_files=["res://.godot/imported/Hazards.png-89c7d8c6b20820edbd58521230c23371.ctex"]
 
 [params]
 

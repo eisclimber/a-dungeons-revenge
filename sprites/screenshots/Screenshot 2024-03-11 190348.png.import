@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0ud68ofjjs2p"
-path="res://.godot/imported/Hasards.png-35b0f7c3430414e9371242ac3da94e11.ctex"
+uid="uid://bx5i172rmog6f"
+path="res://.godot/imported/Screenshot 2024-03-11 190348.png-415ff7d521753b96aa8682d405febc49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Hasards.png"
-dest_files=["res://.godot/imported/Hasards.png-35b0f7c3430414e9371242ac3da94e11.ctex"]
+source_file="res://sprites/screenshots/Screenshot 2024-03-11 190348.png"
+dest_files=["res://.godot/imported/Screenshot 2024-03-11 190348.png-415ff7d521753b96aa8682d405febc49.ctex"]
 
 [params]
 

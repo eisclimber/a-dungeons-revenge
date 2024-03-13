@@ -13,6 +13,7 @@ const BANDAID: AudioStream = preload("res://sounds/BandaidHealing.wav")
 const VITAMINS: AudioStream = preload("res://sounds/Pills.wav")
 
 const HERO_HURT: AudioStream = preload("res://sounds/HeroHurt.wav")
+const HERO_DYING: AudioStream = preload("res://sounds/HeroDying.wav")
 const HERO_WALK: AudioStream = preload("res://sounds/Steps.wav")
 
 const BOSS_DYING: AudioStream = preload("res://sounds/HeroDying.wav")

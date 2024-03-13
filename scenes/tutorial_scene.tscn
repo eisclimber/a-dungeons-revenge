@@ -175,7 +175,7 @@ theme_override_font_sizes/font_size = 20
 text = "Remember: The cleanup crew asked us to keep the throne (red) and the start (green) room clean and only use one card per room!
 
 You are done once he is dead (duh!) 
-Don't let him get too strong (Attack or Defense more than 7), otherwise they will kill our master!"
+Don't let him get too strong (Attack or Defense more than 10), otherwise they will kill our master!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

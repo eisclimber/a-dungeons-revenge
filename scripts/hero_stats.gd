@@ -33,7 +33,7 @@ func apply_card_data(_card_data: CardData) -> void:
 			health -= value1
 			num_effects += 1
 			if health > 0: # Still Alive
-				if _card_data.title == "Ghost":
+				if _card_data.title == "Spikes":
 					Sounds.play_sound(dungeon_player, Sounds.SPIKES)
 				elif _card_data.title == "Death...":
 					Sounds.play_sound(dungeon_player, Sounds.HERO_HURT)

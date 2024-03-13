@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="AcerolaJam0"
-run/main_scene="res://scenes/game.tscn"
+config/name="A Dungeon's Revenge"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/AppIcon.png"
 
 [autoload]
 
@@ -31,7 +31,3 @@ import/blender/enabled=false
 [gui]
 
 theme/custom="res://resources/theme/main_theme.tres"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

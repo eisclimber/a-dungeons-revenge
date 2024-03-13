@@ -1,5 +1,5 @@
-Label
 TextureRect
+Label
 HBoxContainer
 AudioStreamPlayer
 AudioStreamPlayer2D

@@ -1,21 +1,21 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://c2j5avx3ghjaf"]
 
 [ext_resource type="Texture2D" uid="uid://cuh8stggfg06l" path="res://sprites/Grid.png" id="1_trmhn"]
-[ext_resource type="Texture2D" uid="uid://dtnhyx1opet0x" path="res://sprites/DungeonTiles.png" id="3_2bh47"]
-[ext_resource type="Texture2D" uid="uid://drac81llgdaxc" path="res://sprites/Hazards/Hasards.png" id="3_ytuhp"]
+[ext_resource type="Texture2D" uid="uid://b30fbdpo2kp6f" path="res://sprites/DungeonTiles_HighRes.png" id="2_vo0pg"]
+[ext_resource type="Texture2D" uid="uid://dhmbg1kp4db67" path="res://sprites/Hazards/Hazards_HighRes.png" id="3_bbhl2"]
 [ext_resource type="Texture2D" uid="uid://oxw51bubhmr3" path="res://resources/FowBaseFull.tres" id="4_ryfii"]
 [ext_resource type="Texture2D" uid="uid://cy6tm6midq3ul" path="res://resources/FowBaseSemi.tres" id="5_157e8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjwxn"]
 resource_name = "Grid"
 texture = ExtResource("1_trmhn")
-texture_region_size = Vector2i(64, 64)
+texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6spb"]
-resource_name = "Dungeon"
-texture = ExtResource("3_2bh47")
-texture_region_size = Vector2i(64, 64)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da0ij"]
+resource_name = "DungeonTiles"
+texture = ExtResource("2_vo0pg")
+texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -65,10 +65,10 @@ texture_region_size = Vector2i(64, 64)
 6:5/0 = 0
 7:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qirg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kaqe"]
 resource_name = "Hazards"
-texture = ExtResource("3_ytuhp")
-texture_region_size = Vector2i(64, 64)
+texture = ExtResource("3_bbhl2")
+texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -83,19 +83,19 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qplnh"]
 resource_name = "FowFull"
 texture = ExtResource("4_ryfii")
-texture_region_size = Vector2i(64, 64)
+texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqd06"]
 resource_name = "FowSemi"
 texture = ExtResource("5_157e8")
-texture_region_size = Vector2i(64, 64)
+texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 
 [resource]
-tile_size = Vector2i(64, 64)
+tile_size = Vector2i(256, 256)
 sources/0 = SubResource("TileSetAtlasSource_hjwxn")
-sources/1 = SubResource("TileSetAtlasSource_l6spb")
-sources/2 = SubResource("TileSetAtlasSource_1qirg")
 sources/4 = SubResource("TileSetAtlasSource_qplnh")
 sources/5 = SubResource("TileSetAtlasSource_gqd06")
+sources/1 = SubResource("TileSetAtlasSource_da0ij")
+sources/2 = SubResource("TileSetAtlasSource_4kaqe")

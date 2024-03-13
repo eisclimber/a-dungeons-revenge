@@ -48,7 +48,7 @@ var hazards: Array[int]
 
 func _ready() -> void:
 	dungeon_size = dungeon_map.get_used_rect().size
-	seed(0)
+	#seed(0)
 	#randomize()
 	generate_dungeon()
 
@@ -156,6 +156,7 @@ func _calculate_boss_pos() -> Vector2i:
 	var dungeon_pos = dungeon_map.get_used_rect().position
 	var dungeon_end = dungeon_map.get_used_rect().end
 	var dungeon_center = dungeon_map.get_used_rect().get_center()
+	@warning_ignore("integer_division")
 	var boss_max_dist = max(dungeon_size.x / 2, dungeon_size.y / 2)
 	# Offset should be at least min_boss_dist
 	var boss_distance = Vector2.ONE * randi_range(min_boss_dist, boss_max_dist)

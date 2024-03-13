@@ -64,7 +64,6 @@ ui_sound_player = NodePath("../../../../UISoundPlayer")
 [node name="CardArea" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ltqvy")]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-max_cards = 3
 
 [node name="BossReachedPopup" parent="." instance=ExtResource("5_83bm7")]
 unique_name_in_owner = true

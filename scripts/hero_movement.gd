@@ -114,7 +114,6 @@ func target_next_room() -> void:
 		return
 	
 	var next_id = possible_rooms.pick_random()
-	var next_room = unid(next_id)
 	current_path = astar.get_point_path(current_room_id, next_id)
 	
 	_continue_on_path(false)
@@ -165,6 +164,7 @@ func id(_point: Vector2i) -> int:
 
 
 func unid(_id: int) -> Vector2i:
+	@warning_ignore("integer_division")
 	return Vector2i(_id % dungeon_size.x, _id / dungeon_size.x)
 
 

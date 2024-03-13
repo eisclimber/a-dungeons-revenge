@@ -1,8 +1,8 @@
 class_name Game
 extends Control
 
-const MAX_ATTACK := 8
-const MAX_DEFENSE := 8
+const MAX_ATTACK := 11
+const MAX_DEFENSE := 11
 
 const DEATH_WAIT := 1.0
 const UNSTOPPABLE_WAIT := 1.0
@@ -40,7 +40,7 @@ func _on_boss_reached_popup_continue_dungeon() -> void:
 func _on_hero_stats_player_stats_changed(_effect: int, _health: int, _max_health: int, \
 		_attack: int, _defense: int, _num_effects: int) -> void:
 	
-	if _attack >= MAX_ATTACK or _defense >= MAX_DEFENSE:
+	if _attack > MAX_ATTACK or _defense >= MAX_DEFENSE:
 		Global.change_to_game_over_scene(Global.GAME_OVER_STATES.UNSTOPPABLE, UNSTOPPABLE_WAIT, _num_effects)
 
 

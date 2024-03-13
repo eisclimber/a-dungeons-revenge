@@ -43,7 +43,7 @@ mouse_filter = 2
 [node name="DungeonMap" type="TileMap" parent="Margin/DungeonSpace"]
 unique_name_in_owner = true
 position = Vector2(12, 0)
-scale = Vector2(2, 2)
+scale = Vector2(0.5, 0.5)
 tile_set = ExtResource("2_a7nrn")
 format = 2
 layer_0/name = "Grid"

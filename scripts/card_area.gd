@@ -9,7 +9,7 @@ signal all_cards_placed()
 signal cards_placement_confirmed()
 
 @export var cards: Array[CardData]
-@export var max_cards := 8
+@export var max_cards := 7
 @export var draw_duration := 0.1
 @export var inter_draw_duration := 0.3
 

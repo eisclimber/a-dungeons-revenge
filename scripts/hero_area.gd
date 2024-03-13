@@ -22,6 +22,7 @@ func _on_hero_stats_player_stats_changed(_effect: int, _health: int, _max_health
 	defense_label.text = DEFENSE_FORMAT % _defense
 	attack_label.text = ATTACK_FORMAT % _attack
 	
+	@warning_ignore("integer_division")
 	var below_half_health = _health <= _max_health / 2
 	
 	if below_half_health and player_sprite.texture == idle_animation:

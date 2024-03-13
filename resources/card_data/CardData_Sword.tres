@@ -12,4 +12,5 @@ effect = 4
 value1 = 2
 value2 = 0
 value3 = 0
-atlas_tile_pos = Vector2i(4, 0)
+atlas_tile_pos = Vector2i(3, 0)
+one_shot = true
