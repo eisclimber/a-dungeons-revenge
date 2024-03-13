@@ -13,3 +13,4 @@ value1 = 1
 value2 = 1
 value3 = 2
 atlas_tile_pos = Vector2i(1, 0)
+one_shot = true

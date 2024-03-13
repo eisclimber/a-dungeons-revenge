@@ -21,6 +21,15 @@ const FANFARE: AudioStream = preload("res://sounds/Fanfares.wav")
 const CARD_DRAW: AudioStream = preload("res://sounds/CardDraw.wav")
 const CARD_PLACE: AudioStream = preload("res://sounds/CardPlace.wav")
 
+const MUSIC_TRACK: AudioStream = preload("res://sounds/Alexandr Zhelanov - Caves of Sorrow.ogg")
+
+var music_player: AudioStreamPlayer 
+
+func _ready() -> void:
+	music_player = AudioStreamPlayer.new()
+	add_child(music_player)
+	play_sound(music_player, MUSIC_TRACK)
+
 
 func play_pressed_sound(_player: AudioStreamPlayer) -> void:
 	play_sound(_player, Sounds.BUTTON_DOWN)

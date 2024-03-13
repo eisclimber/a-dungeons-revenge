@@ -55,14 +55,27 @@ layout_mode = 2
 
 [node name="Margin1" type="MarginContainer" parent="Margin"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 46
+
+[node name="Credits" type="Label" parent="Margin/Margin1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Made By: Luca \"eisclimber\" Dreiling"
+
+[node name="Margin2" type="MarginContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 20
 
-[node name="Credits" type="Label" parent="Margin/Margin1"]
+[node name="SoundCredits" type="Label" parent="Margin/Margin2"]
 layout_mode = 2
-text = "Made By: Luca \"eisclimber\" Dreiling"
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Music: Caves of Sorrow by Alexandr Zhelanov under CC BY 3.0"
 
 [node name="Death" type="TextureRect" parent="."]
 layout_mode = 2
@@ -126,10 +139,10 @@ text = "Exit"
 
 [node name="Ghost3" type="TextureRect" parent="."]
 layout_mode = 2
-offset_left = 206.0
-offset_top = 367.0
-offset_right = 482.0
-offset_bottom = 553.0
+offset_left = 215.0
+offset_top = 340.0
+offset_right = 491.0
+offset_bottom = 526.0
 rotation = 0.106465
 texture = ExtResource("5_e73mr")
 expand_mode = 1
@@ -143,10 +156,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -316.0
-offset_top = -47.0
-offset_right = -169.0
-offset_bottom = 188.0
+offset_left = -307.0
+offset_top = -61.0
+offset_right = -160.0
+offset_bottom = 174.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("2_t7h32")
@@ -162,10 +175,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -340.74
-offset_top = -91.0
-offset_right = -177.74
-offset_bottom = 294.0
+offset_left = -336.0
+offset_top = -110.0
+offset_right = -173.0
+offset_bottom = 275.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("2_nqmph")
@@ -180,10 +193,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -412.0
-offset_top = 6.0
-offset_right = -265.0
-offset_bottom = 241.0
+offset_left = -403.0
+offset_top = -8.0
+offset_right = -256.0
+offset_bottom = 227.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("2_t7h32")
@@ -199,10 +212,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -262.0
-offset_top = 3.0
-offset_right = -115.0
-offset_bottom = 238.0
+offset_left = -253.0
+offset_top = -11.0
+offset_right = -106.0
+offset_bottom = 224.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("2_t7h32")
@@ -218,10 +231,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -952.0
-offset_top = 66.0
-offset_right = -852.0
-offset_bottom = 231.0
+offset_left = -943.0
+offset_top = 39.0
+offset_right = -843.0
+offset_bottom = 204.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("8_n7w2k")
@@ -230,10 +243,10 @@ stretch_mode = 5
 
 [node name="HeroDecoration" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 354.0
-offset_right = 284.0
-offset_bottom = 542.0
+offset_left = 114.0
+offset_top = 327.0
+offset_right = 293.0
+offset_bottom = 515.0
 texture = ExtResource("4_47ttw")
 expand_mode = 1
 stretch_mode = 5
